@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { MapPin, Phone, Clock, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Clock } from 'lucide-react';
 
 export default function AuraFooter({ niche }: { niche: string }) {
   return (
@@ -15,11 +15,11 @@ export default function AuraFooter({ niche }: { niche: string }) {
               Elevando o seu estilo com excelência e sofisticação. {niche === 'barbearia' ? 'A barbearia definitiva para o homem moderno.' : 'O espaço perfeito para a sua transformação.'}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#C5A880] transition-colors">
-                <Instagram className="w-5 h-5" />
+              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#C5A880] transition-colors font-bold text-xs">
+                IG
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#C5A880] transition-colors">
-                <Facebook className="w-5 h-5" />
+              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#C5A880] transition-colors font-bold text-xs">
+                FB
               </a>
             </div>
           </div>
