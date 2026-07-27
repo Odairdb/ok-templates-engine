@@ -1,6 +1,8 @@
 import React from 'react';
 import AuraHero from '@/components/aura/AuraHero';
 import AuraServices from '@/components/aura/AuraServices';
+import AuraGallery from '@/components/aura/AuraGallery';
+import AuraTeam from '@/components/aura/AuraTeam';
 import PlinShowcase from '@/components/shared/PlinShowcase';
 
 interface PageProps {
@@ -17,6 +19,8 @@ export default async function AuraTemplate({ searchParams }: PageProps) {
     <main className="min-h-screen bg-[#FDFBF7] text-gray-900 font-sans">
       <AuraHero initialNiche={niche} />
       <AuraServices niche={niche} />
+      <AuraGallery niche={niche} />
+      <AuraTeam niche={niche} />
       <PlinShowcase niche={niche} templateType="aura" />
     </main>
   );
