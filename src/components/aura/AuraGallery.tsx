@@ -35,7 +35,7 @@ export default function AuraGallery({ niche }: { niche: string }) {
 
   return (
     <section className="py-24 bg-white">
-      <div className="w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-32">
+      <div className="w-full max-w-6xl mx-auto px-10 md:px-20 lg:px-32">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <span className="text-[#C5A880] font-bold tracking-widest uppercase text-sm mb-4 block">Portfólio</span>
