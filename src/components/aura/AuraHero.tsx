@@ -65,7 +65,7 @@ export default function AuraHero({ initialNiche }: { initialNiche: string }) {
   const activeSlide = currentNicheData[currentIndex];
 
   return (
-    <section className="relative w-full h-screen min-h-[700px] flex items-center overflow-hidden bg-black">
+    <section className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-black">
       
       {/* Background Media */}
       <AnimatePresence mode="wait">
@@ -95,14 +95,14 @@ export default function AuraHero({ initialNiche }: { initialNiche: string }) {
           )}
           
           {/* Overlay Escuro Gradiente para leitura do texto à esquerda */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
         </motion.div>
       </AnimatePresence>
 
-      <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24 w-full relative z-10 flex flex-col pt-10">
+      <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20 relative z-10 flex flex-col pt-10">
         
         {/* Textos e CTA no Canto Esquerdo */}
-        <div className="w-full lg:w-1/2 flex flex-col items-start pl-4 lg:pl-10">
+        <div className="w-full lg:w-1/2 flex flex-col items-start">
           <AnimatePresence mode="wait">
             <motion.div
               key={`text-${currentIndex}`}
