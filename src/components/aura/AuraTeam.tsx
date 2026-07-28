@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Instagram } from 'lucide-react';
 
 const nicheTeam = {
   default: [
@@ -62,8 +61,8 @@ export default function AuraTeam({ niche }: { niche: string }) {
                 
                 {/* Social Overlay */}
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <a href="#" className="w-12 h-12 rounded-full bg-white text-[#1A1A1A] flex items-center justify-center hover:bg-[#8B2626] hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300">
-                    <Instagram className="w-5 h-5" />
+                  <a href="#" className="w-12 h-12 rounded-full bg-white text-[#1A1A1A] flex items-center justify-center hover:bg-[#8B2626] hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 font-bold text-xs">
+                    IG
                   </a>
                 </div>
               </div>
