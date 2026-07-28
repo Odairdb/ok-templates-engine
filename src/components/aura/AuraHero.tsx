@@ -120,8 +120,8 @@ export default function AuraHero({ initialNiche }: { initialNiche: string }) {
                 {activeSlide.subtitle}
               </p>
 
-              <div className="flex flex-wrap items-center gap-6 mt-4">
-                <a href="#agendar" className="px-12 py-5 bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-bold text-base transition-all shadow-xl uppercase tracking-widest border border-white/10 backdrop-blur-sm">
+              <div className="flex flex-wrap items-center gap-6 mt-10">
+                <a href="#agendar" className="px-16 py-6 bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-bold text-base md:text-lg transition-all shadow-xl uppercase tracking-widest border border-white/10 backdrop-blur-sm">
                   Agendar Horário
                 </a>
               </div>
