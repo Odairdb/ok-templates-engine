@@ -31,7 +31,7 @@ export default function AuraServices({ niche }: { niche: string }) {
 
   return (
     <section className="py-24 bg-[#FDFBF7] relative">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
         
         <div className="flex flex-col lg:flex-row items-end justify-between mb-16 gap-8">
           <div className="max-w-lg">

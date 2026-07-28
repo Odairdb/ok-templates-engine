@@ -99,7 +99,7 @@ export default function AuraHero({ initialNiche }: { initialNiche: string }) {
         </motion.div>
       </AnimatePresence>
 
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10 flex flex-col pt-10">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24 w-full relative z-10 flex flex-col pt-10">
         
         {/* Textos e CTA no Canto Esquerdo */}
         <div className="w-full lg:w-1/2 flex flex-col items-start pl-4 lg:pl-10">
