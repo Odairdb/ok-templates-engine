@@ -99,7 +99,7 @@ export default function AuraHero({ initialNiche }: { initialNiche: string }) {
         </motion.div>
       </AnimatePresence>
 
-      <div className="w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-24 relative z-10 flex flex-col pt-10">
+      <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20 relative z-10 flex flex-col pt-10">
         
         {/* Textos e CTA no Canto Esquerdo */}
         <div className="w-full lg:w-1/2 flex flex-col items-start">
@@ -120,8 +120,8 @@ export default function AuraHero({ initialNiche }: { initialNiche: string }) {
                 {activeSlide.subtitle}
               </p>
 
-              <div className="flex flex-wrap items-center gap-6 mt-16">
-                <a href="#agendar" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-bold uppercase tracking-widest transition-transform hover:scale-105 shadow-[0_0_30px_rgba(139,38,38,0.6)]">
+              <div className="flex flex-wrap items-center gap-6 mt-24">
+                <a href="#agendar" className="inline-flex items-center justify-center gap-3 px-14 py-6 bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-black text-lg uppercase tracking-widest transition-transform hover:scale-105 shadow-[0_0_30px_rgba(139,38,38,0.6)]">
                   Agendar Horário
                 </a>
               </div>

@@ -6,7 +6,7 @@ import { MapPin, Phone, Clock } from 'lucide-react';
 export default function AuraFooter({ niche }: { niche: string }) {
   return (
     <footer className="bg-black text-white pt-20 pb-10 border-t border-white/10">
-      <div className="w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
+      <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand & Sobre */}
           <div>
