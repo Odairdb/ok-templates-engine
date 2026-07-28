@@ -26,7 +26,7 @@ export default function AuraTeam({ niche }: { niche: string }) {
 
   return (
     <section className="py-24 bg-[#FDFBF7]">
-      <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20">
+      <div className="w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-32">
         
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-16 gap-8">
           <div className="max-w-lg">
