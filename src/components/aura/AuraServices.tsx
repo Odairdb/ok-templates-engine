@@ -33,17 +33,12 @@ export default function AuraServices({ niche }: { niche: string }) {
     <section className="py-24 bg-[#FDFBF7] relative flex flex-col items-center w-full">
       <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20">
         
-        <div className="flex flex-col lg:flex-row items-end justify-between mb-16 gap-8">
-          <div className="max-w-lg">
-            <h2 className="text-4xl md:text-5xl font-serif text-[#1A1A1A] mb-6">Nossos Serviços</h2>
-            <p className="text-gray-600 leading-relaxed font-sans">
+        <div className="flex flex-col items-center text-center mb-24">
+          <div className="max-w-2xl">
+            <h2 className="text-4xl md:text-5xl font-serif text-[#1A1A1A] mb-8">Nossos Serviços</h2>
+            <p className="text-gray-600 text-lg leading-relaxed font-sans">
               Além de cortes perfeitos e cores radiantes, oferecemos uma gama de serviços completos para garantir que o seu visual esteja sempre impecável e alinhado com a sua essência.
             </p>
-          </div>
-          <div className="hidden lg:block">
-            <a href="#agendar" className="inline-block border-b-2 border-[#1A1A1A] pb-1 text-[#1A1A1A] font-bold text-sm uppercase tracking-widest hover:text-[#8B2626] hover:border-[#8B2626] transition-colors">
-              Ver Todos os Serviços
-            </a>
           </div>
         </div>
 
@@ -83,8 +78,8 @@ export default function AuraServices({ niche }: { niche: string }) {
           ))}
         </div>
         
-        <div className="mt-10 lg:hidden text-center">
-            <a href="#agendar" className="inline-block border-b-2 border-[#1A1A1A] pb-1 text-[#1A1A1A] font-bold text-sm uppercase tracking-widest">
+        <div className="mt-16 text-center">
+            <a href="#agendar" className="inline-block border-b-2 border-[#1A1A1A] pb-1 text-[#1A1A1A] font-bold text-sm uppercase tracking-widest hover:text-[#8B2626] hover:border-[#8B2626] transition-colors">
               Ver Todos os Serviços
             </a>
         </div>
