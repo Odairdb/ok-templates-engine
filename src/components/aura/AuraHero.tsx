@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const niches = {
   default: [
     {
-      title: "Elevando\no Padrão da Beleza",
+      title: "A Arte\nda Beleza",
       subtitle: "A combinação perfeita entre técnica de ponta e um ambiente desenhado para você. Descubra o estilo que reflete a sua verdadeira essência.",
       video: "/videos/modelo-01-look-red.mp4"
     },
