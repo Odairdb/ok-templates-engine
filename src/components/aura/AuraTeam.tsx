@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 const nicheTeam = {
   default: [
-    { name: "Olivia Smith", role: "Estilista Sênior", img: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=600&auto=format&fit=crop" },
-    { name: "Amelia Brown", role: "Colorista", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
-    { name: "Emily Watson", role: "Maquiadora", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" },
+    { name: "Carla Santos", role: "Estilista Sênior", img: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=600&auto=format&fit=crop" },
+    { name: "Fernanda Lima", role: "Colorista", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
+    { name: "Beatriz Costa", role: "Maquiadora", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" },
   ],
   barbearia: [
     { name: "Marcão", role: "Mestre Barbeiro", img: "https://images.unsplash.com/photo-1618077360395-f3068be8e001?q=80&w=600&auto=format&fit=crop" },
@@ -25,20 +25,15 @@ export default function AuraTeam({ niche }: { niche: string }) {
   const team = nicheTeam[niche as keyof typeof nicheTeam] || nicheTeam.default;
 
   return (
-    <section className="py-24 bg-[#FDFBF7]">
+    <section className="bg-[#FDFBF7] relative flex flex-col items-center w-full" style={{ paddingTop: '90px', paddingBottom: '90px' }}>
       <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20">
         
-        <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-16 gap-8">
-          <div className="max-w-lg">
-            <h2 className="text-4xl md:text-5xl font-serif text-[#1A1A1A] mb-6">Nossa Equipe</h2>
-            <p className="text-gray-600 leading-relaxed font-sans">
+        <div className="flex flex-col items-center text-center mb-32" style={{ marginBottom: '80px' }}>
+          <div className="max-w-3xl">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1A1A1A] mb-12">Nossa Equipe</h2>
+            <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-sans px-4">
               Deixe seu visual nas mãos de artistas qualificados e criativos. Nossa equipe é treinada internacionalmente para entregar resultados perfeitos.
             </p>
-          </div>
-          <div>
-            <a href="#equipe" className="px-8 py-3 rounded-full border-2 border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white transition-colors font-bold text-sm uppercase tracking-widest flex items-center gap-2">
-              Junte-se ao time →
-            </a>
           </div>
         </div>
 
@@ -72,6 +67,12 @@ export default function AuraTeam({ niche }: { niche: string }) {
               </div>
             </motion.div>
           ))}
+        </div>
+        
+        <div className="mt-16 text-center" style={{ marginTop: '80px' }}>
+            <a href="#equipe" className="inline-flex px-8 py-3 rounded-full border-2 border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white transition-colors font-bold text-sm uppercase tracking-widest items-center gap-2">
+              Junte-se ao time →
+            </a>
         </div>
       </div>
     </section>

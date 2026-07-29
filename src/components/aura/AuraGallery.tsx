@@ -19,7 +19,7 @@ const nicheImages = {
   salao: [
     "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600948836101-f9ff5141014a?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e43?q=80&w=800&auto=format&fit=crop"
   ],
   manicure: [
@@ -34,9 +34,9 @@ export default function AuraGallery({ niche }: { niche: string }) {
   const images = nicheImages[niche as keyof typeof nicheImages] || nicheImages.default;
 
   return (
-    <section className="py-24 bg-white">
+    <section className="bg-white relative flex flex-col items-center w-full" style={{ paddingTop: '90px', paddingBottom: '90px' }}>
       <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-32" style={{ marginBottom: '80px' }}>
           <div>
             <span className="text-[#C5A880] font-bold tracking-widest uppercase text-sm mb-4 block">Portfólio</span>
             <h2 className="text-4xl md:text-5xl font-serif text-gray-900">Resultados Reais</h2>
