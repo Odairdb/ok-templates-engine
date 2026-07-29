@@ -30,13 +30,13 @@ export default function AuraServices({ niche }: { niche: string }) {
   const services = nicheServices[niche as keyof typeof nicheServices] || nicheServices.default;
 
   return (
-    <section className="py-24 bg-[#FDFBF7] relative flex flex-col items-center w-full">
+    <section className="pt-32 pb-32 bg-[#FDFBF7] relative flex flex-col items-center w-full">
       <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20">
         
-        <div className="flex flex-col items-center text-center mb-24">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-serif text-[#1A1A1A] mb-8">Nossos Serviços</h2>
-            <p className="text-gray-600 text-lg leading-relaxed font-sans">
+        <div className="flex flex-col items-center text-center mb-32">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1A1A1A] mb-12">Nossos Serviços</h2>
+            <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-sans px-4">
               Além de cortes perfeitos e cores radiantes, oferecemos uma gama de serviços completos para garantir que o seu visual esteja sempre impecável e alinhado com a sua essência.
             </p>
           </div>
