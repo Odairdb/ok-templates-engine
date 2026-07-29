@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const nicheTeam = {
   default: [
-    { name: "Carla Santos", role: "Estilista Sênior", img: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=600&auto=format&fit=crop" },
+    { name: "Carla Santos", role: "Estilista Sênior", img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" },
     { name: "Fernanda Lima", role: "Colorista", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
     { name: "Beatriz Costa", role: "Maquiadora", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" },
   ],
@@ -70,7 +70,7 @@ export default function AuraTeam({ niche }: { niche: string }) {
         </div>
         
         <div className="mt-16 text-center" style={{ marginTop: '80px' }}>
-            <a href="#equipe" className="inline-flex px-8 py-3 rounded-full border-2 border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white transition-colors font-bold text-sm uppercase tracking-widest items-center gap-2">
+            <a href="#equipe" className="inline-flex items-center justify-center bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-black text-xl uppercase tracking-widest transition-transform hover:scale-105 shadow-[0_0_30px_rgba(139,38,38,0.6)] gap-2" style={{ padding: '20px 48px' }}>
               Junte-se ao time →
             </a>
         </div>

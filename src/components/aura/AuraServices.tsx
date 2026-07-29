@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const nicheServices = {
   default: [
-    { title: "Cortes", tag: "Premium", img: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=600&auto=format&fit=crop" },
+    { title: "Cortes", tag: "Premium", img: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" },
     { title: "Penteados", tag: "Eventos", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
     { title: "Coloração", tag: "Transformação", img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop" },
   ],
@@ -79,7 +79,7 @@ export default function AuraServices({ niche }: { niche: string }) {
         </div>
         
         <div className="mt-16 text-center" style={{ marginTop: '80px' }}>
-            <a href="#agendar" className="inline-block border-b-2 border-[#1A1A1A] pb-1 text-[#1A1A1A] font-bold text-sm uppercase tracking-widest hover:text-[#8B2626] hover:border-[#8B2626] transition-colors">
+            <a href="#agendar" className="inline-flex items-center justify-center bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-black text-xl uppercase tracking-widest transition-transform hover:scale-105 shadow-[0_0_30px_rgba(139,38,38,0.6)]" style={{ padding: '20px 48px' }}>
               Ver Todos os Serviços
             </a>
         </div>

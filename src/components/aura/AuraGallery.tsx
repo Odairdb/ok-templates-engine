@@ -7,7 +7,7 @@ const nicheImages = {
   default: [
     "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e43?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1600948836101-f9ff5141014a?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=800&auto=format&fit=crop"
   ],
   barbearia: [
