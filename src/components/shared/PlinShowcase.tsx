@@ -8,7 +8,9 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
       <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
         <div>
           <span className="text-[#FF0054] font-bold tracking-widest uppercase text-sm mb-4 block">O Poder em suas mãos</span>
-          <h2 className="text-4xl md:text-5xl font-black mb-6">Mais do que um Site. <br/>O Controle Total.</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-[42px] font-black mb-6 leading-tight">
+            <span className="whitespace-nowrap">Mais do que um Site.</span> <br/>O Controle Total.
+          </h2>
           <p className="text-gray-400 text-lg leading-relaxed">
             Nossos sites vêm equipados com a base do <strong>Sistema Plin</strong>. Esqueça planilhas e agendas de papel. Gerencie agendamentos, clientes e fluxo de caixa em um painel inteligente integrado ao seu novo site.
           </p>
