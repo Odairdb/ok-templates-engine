@@ -15,9 +15,9 @@ const nicheServices = {
     { title: "Química", tag: "Estilo", img: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=600&auto=format&fit=crop" },
   ],
   salao: [
-    { title: "Mechas", tag: "Luminosidade", img: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" },
-    { title: "Cortes", tag: "Tendência", img: "https://images.unsplash.com/photo-1600948836101-f9ff5141014a?q=80&w=600&auto=format&fit=crop" },
-    { title: "Noivas", tag: "Dia da Noiva", img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" },
+    { title: "Cortes", tag: "Premium", img: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" },
+    { title: "Penteados", tag: "Eventos", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
+    { title: "Coloração", tag: "Transformação", img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop" },
   ],
   manicure: [
     { title: "Nail Art", tag: "Exclusivo", img: "https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=600&auto=format&fit=crop" },

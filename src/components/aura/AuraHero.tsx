@@ -30,13 +30,13 @@ const niches = {
   ],
   salao: [
     {
-      title: "Seu Melhor\nEstilo",
-      subtitle: "Especialistas em mechas, cortes modernos e tratamentos de alto padrão. Um momento de luxo dedicado à sua autoestima.",
+      title: "A Arte\nda Beleza",
+      subtitle: "A combinação perfeita entre técnica de ponta e um ambiente desenhado para você. Descubra o estilo que reflete a sua verdadeira essência.",
       video: "/videos/modelo-01-look-red.mp4"
     },
     {
-      title: "Brilho\nIntenso",
-      subtitle: "Técnicas avançadas de colorimetria para destacar os seus traços e iluminar a sua beleza natural.",
+      title: "Cortes de Alta Precisão",
+      subtitle: "Tradição e modernidade para um visual impecável. Nossos especialistas estão prontos para transformar o seu look.",
       video: "/videos/modelo-02-look-black.mp4"
     }
   ],

@@ -15,9 +15,9 @@ const nicheTeam = {
     { name: "Leo", role: "Visagista", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" },
   ],
   salao: [
-    { name: "Amanda Silva", role: "Colorimetria Global", img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" },
-    { name: "Juliana", role: "Especialista em Loiros", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
-    { name: "Roberto", role: "Stylist e Cortes", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" },
+    { name: "Carla Santos", role: "Estilista Sênior", img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" },
+    { name: "Fernanda Lima", role: "Colorista", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
+    { name: "Beatriz Costa", role: "Maquiadora", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" },
   ]
 };
 
