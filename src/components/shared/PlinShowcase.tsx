@@ -7,7 +7,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
     <section className="py-32 bg-[#0A1128] text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
         <div>
-          <span className="text-[#FF0054] font-bold tracking-widest uppercase text-sm mb-4 block">Poder Oculto</span>
+          <span className="text-[#FF0054] font-bold tracking-widest uppercase text-sm mb-4 block">O Poder em suas mãos</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6">Mais do que um Site. <br/>O Controle Total.</h2>
           <p className="text-gray-400 text-lg mb-8 leading-relaxed">
             Nossos sites vêm equipados com a base do <strong>Sistema Plin</strong>. Esqueça planilhas e agendas de papel. Gerencie agendamentos, clientes e fluxo de caixa em um painel inteligente integrado ao seu novo site.
