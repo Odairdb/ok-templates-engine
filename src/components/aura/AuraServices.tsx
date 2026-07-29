@@ -30,7 +30,7 @@ export default function AuraServices({ niche }: { niche: string }) {
   const services = nicheServices[niche as keyof typeof nicheServices] || nicheServices.default;
 
   return (
-    <section className="pt-32 pb-32 bg-[#FDFBF7] relative flex flex-col items-center w-full">
+    <section className="bg-[#FDFBF7] relative flex flex-col items-center w-full" style={{ paddingTop: '150px', paddingBottom: '150px' }}>
       <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20">
         
         <div className="flex flex-col items-center text-center mb-32">
@@ -60,7 +60,7 @@ export default function AuraServices({ niche }: { niche: string }) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
               
               {/* Floating Tag */}
-              <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+              <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-full shadow-sm" style={{ padding: '12px 24px' }}>
                 <span className="text-xs font-bold text-[#1A1A1A] uppercase tracking-wider">{service.title}</span>
               </div>
               
