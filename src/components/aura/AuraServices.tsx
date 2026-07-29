@@ -30,7 +30,7 @@ export default function AuraServices({ niche }: { niche: string }) {
   const services = nicheServices[niche as keyof typeof nicheServices] || nicheServices.default;
 
   return (
-    <section className="bg-[#FDFBF7] relative flex flex-col items-center w-full" style={{ paddingTop: '150px', paddingBottom: '150px' }}>
+    <section className="bg-[#FDFBF7] relative flex flex-col items-center w-full" style={{ paddingTop: '90px', paddingBottom: '90px' }}>
       <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20">
         
         <div className="flex flex-col items-center text-center mb-32">
