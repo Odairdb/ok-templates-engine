@@ -33,7 +33,7 @@ export default function AuraServices({ niche }: { niche: string }) {
     <section className="bg-[#FDFBF7] relative flex flex-col items-center w-full" style={{ paddingTop: '90px', paddingBottom: '90px' }}>
       <div className="w-full max-w-[1200px] mx-auto px-10 md:px-16 lg:px-20">
         
-        <div className="flex flex-col items-center text-center mb-32">
+        <div className="flex flex-col items-center text-center mb-32" style={{ marginBottom: '80px' }}>
           <div className="max-w-3xl">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1A1A1A] mb-12">Nossos Serviços</h2>
             <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-sans px-4">
@@ -78,7 +78,7 @@ export default function AuraServices({ niche }: { niche: string }) {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center" style={{ marginTop: '80px' }}>
             <a href="#agendar" className="inline-block border-b-2 border-[#1A1A1A] pb-1 text-[#1A1A1A] font-bold text-sm uppercase tracking-widest hover:text-[#8B2626] hover:border-[#8B2626] transition-colors">
               Ver Todos os Serviços
             </a>
