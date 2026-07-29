@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const niches = {
   default: [
     {
-      title: "Elevando o Padrão da Beleza",
+      title: "Elevando\no Padrão da Beleza",
       subtitle: "A combinação perfeita entre técnica de ponta e um ambiente desenhado para você. Descubra o estilo que reflete a sua verdadeira essência.",
       video: "/videos/modelo-01-look-red.mp4"
     },
@@ -112,7 +112,7 @@ export default function AuraHero({ initialNiche }: { initialNiche: string }) {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="max-w-xl"
             >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-[1.1] tracking-tight drop-shadow-lg">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-[1.1] tracking-tight drop-shadow-lg whitespace-pre-line">
                 {activeSlide.title}
               </h1>
               
@@ -120,8 +120,8 @@ export default function AuraHero({ initialNiche }: { initialNiche: string }) {
                 {activeSlide.subtitle}
               </p>
 
-              <div className="flex flex-wrap items-center gap-6 mt-24">
-                <a href="#agendar" className="inline-flex items-center justify-center gap-3 px-14 py-6 bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-black text-lg uppercase tracking-widest transition-transform hover:scale-105 shadow-[0_0_30px_rgba(139,38,38,0.6)]">
+              <div className="flex flex-wrap items-center gap-6 mt-32">
+                <a href="#agendar" className="inline-flex items-center justify-center px-16 py-8 bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-black text-xl uppercase tracking-widest transition-transform hover:scale-105 shadow-[0_0_30px_rgba(139,38,38,0.6)]">
                   Agendar Horário
                 </a>
               </div>
