@@ -20,9 +20,9 @@ const nicheServices = {
     { title: "Coloração", tag: "Transformação", img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop" },
   ],
   manicure: [
-    { title: "Nail Art", tag: "Exclusivo", img: "https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=600&auto=format&fit=crop" },
+    { title: "Nail Art", tag: "Exclusivo", img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop" },
     { title: "Fibras", tag: "Resistência", img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=600&auto=format&fit=crop" },
-    { title: "Spa dos Pés", tag: "Relaxamento", img: "https://images.unsplash.com/photo-1594910903332-9df7270b2a75?q=80&w=600&auto=format&fit=crop" },
+    { title: "Spa dos Pés", tag: "Relaxamento", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
   ]
 };
 
