@@ -8,8 +8,9 @@ export default function Home() {
       <div className="max-w-5xl text-center w-full">
         {/* LOGO DA OK COMUNICA */}
         <div className="flex justify-center mb-12">
-          {/* Coloque o arquivo logo.png na pasta public para aparecer aqui */}
-          <img src="/logo.png" alt="OK Comunica" className="h-24 object-contain" />
+          <a href="https://okcomunica.com.br" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform">
+            <img src="/logo.png" alt="OK Comunica" className="h-24 object-contain" />
+          </a>
         </div>
 
         <h1 className="text-5xl md:text-6xl font-black mb-6">Motor de Templates OK</h1>

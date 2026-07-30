@@ -55,9 +55,12 @@ export default function AuraFooter({ niche }: { niche: string }) {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} AURA. Todos os direitos reservados.</p>
-          <p className="mt-2 md:mt-0">
-            Desenvolvido por <a href="https://okcomunica.com.br" target="_blank" rel="noreferrer" className="text-white hover:text-[#C5A880] font-bold transition-colors">OK Comunica</a>
-          </p>
+          <div className="mt-4 md:mt-0 flex items-center gap-2">
+            <span>Desenvolvido por</span>
+            <a href="https://okcomunica.com.br" target="_blank" rel="noreferrer" className="flex items-center hover:scale-105 transition-transform">
+              <img src="/logo.png" alt="OK Comunica" className="h-6 object-contain" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
