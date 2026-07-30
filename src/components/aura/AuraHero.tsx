@@ -3,7 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const niches = {
+interface SlideData {
+  title: string;
+  subtitle: string;
+  video?: string;
+  image?: string;
+}
+
+const niches: Record<string, SlideData[]> = {
   default: [
     {
       title: "A Arte\nda Beleza",
