@@ -20,12 +20,12 @@ const niches = {
     {
       title: "O Visual\nPerfeito",
       subtitle: "Barbearia premium. Tradição, precisão e um ambiente feito exclusivamente para o homem moderno relaxar e cuidar do visual.",
-      image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2000&auto=format&fit=crop"
+      video: "/videos/corte-cabelo-01.mp4"
     },
     {
       title: "Tradição\ne Estilo",
       subtitle: "Domine a sua presença com um corte impecável e cuidados especiais para a barba e pele.",
-      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2000&auto=format&fit=crop"
+      video: "/videos/corte-barba-01.mp4"
     }
   ],
   salao: [
@@ -44,7 +44,12 @@ const niches = {
     {
       title: "Detalhes\nFascinantes",
       subtitle: "Nail art, alongamentos em fibra e cuidado supremo para as suas unhas brilharem em qualquer ocasião.",
-      image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=2000&auto=format&fit=crop"
+      video: "/videos/manicure-01.mp4"
+    },
+    {
+      title: "Beleza\nem Foco",
+      subtitle: "O acabamento perfeito que destaca a sua personalidade com muito brilho e sofisticação.",
+      video: "/videos/manicure-02.mp4"
     }
   ]
 };
