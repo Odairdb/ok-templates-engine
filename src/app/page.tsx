@@ -4,18 +4,18 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0A1128] text-white flex flex-col items-center pt-16 md:pt-28 p-6 md:p-10">
+    <main className="min-h-screen bg-[#0A1128] text-white flex flex-col items-center justify-center p-6 md:p-10">
       <div className="max-w-[1200px] text-center w-full flex flex-col items-center">
         
         {/* LOGO DA OK COMUNICA */}
-        <div className="flex justify-center mb-12 md:mb-16">
+        <div className="flex justify-center mb-12 md:mb-16 mt-4">
           <a href="https://okcomunica.com.br" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform">
-            <img src="/logo.png" alt="OK Comunica" className="h-24 md:h-32 object-contain" />
+            <img src="/logo.png" alt="OK Comunica" className="h-28 md:h-36 object-contain" />
           </a>
         </div>
 
         {/* HEADLINE E SUBTÍTULO */}
-        <h1 className="text-5xl md:text-7xl font-black mb-8 md:mb-10 tracking-tight whitespace-nowrap text-center">Modelos de Templates</h1>
+        <h1 className="text-5xl md:text-7xl font-black mb-6 md:mb-8 tracking-tight whitespace-nowrap text-center">Modelos de Templates</h1>
         <p className="text-lg md:text-xl text-gray-400 mb-20 md:mb-28 max-w-3xl mx-auto px-4 text-center">Selecione um dos Super-Templates abaixo para visualizar a demonstração dinâmica.</p>
         
         {/* GRADES DOS TEMPLATES */}
