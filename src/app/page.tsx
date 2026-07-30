@@ -8,15 +8,8 @@ export default function Home() {
       <div className="max-w-5xl text-center w-full">
         {/* LOGO DA OK COMUNICA */}
         <div className="flex justify-center mb-12">
-          {/* Se a imagem ainda não estiver na pasta public, ela vai aparecer quebrada. Coloque o arquivo logo.png na pasta public! */}
-          <img src="/logo.png" alt="OK Comunica" className="h-24 object-contain" onError={(e) => {
-            // Fallback caso a imagem não exista ainda
-            (e.target as HTMLImageElement).style.display = 'none';
-            (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
-          }} />
-          <h1 className="hidden text-5xl font-black tracking-tighter">
-            OK<span className="text-[#FF0054]">COMUNICA</span>
-          </h1>
+          {/* Coloque o arquivo logo.png na pasta public para aparecer aqui */}
+          <img src="/logo.png" alt="OK Comunica" className="h-24 object-contain" />
         </div>
 
         <h1 className="text-5xl md:text-6xl font-black mb-6">Motor de Templates OK</h1>
