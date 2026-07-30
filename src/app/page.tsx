@@ -7,33 +7,34 @@ export default function Home() {
     <main className="min-h-screen bg-[#0A1128] text-white flex flex-col items-center justify-center p-10">
       <div className="max-w-5xl text-center w-full">
         {/* LOGO DA OK COMUNICA */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-16">
           <a href="https://okcomunica.com.br" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform">
             <img src="/logo.png" alt="OK Comunica" className="h-24 object-contain" />
           </a>
         </div>
 
-        <h1 className="text-5xl md:text-6xl font-black mb-6">Motor de Templates OK</h1>
-        <p className="text-xl text-gray-400 mb-16">Selecione um dos Super-Templates abaixo para visualizar a demonstração dinâmica.</p>
+        <h1 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">Modelos de Templates</h1>
+        <p className="text-xl text-gray-400 mb-20 max-w-2xl mx-auto">Selecione um dos Super-Templates abaixo para visualizar a demonstração dinâmica.</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <Link href="/aura" className="p-12 border border-white/10 bg-white/5 hover:bg-white/10 transition-colors rounded-3xl flex flex-col items-center text-center group h-full">
-            <h2 className="text-3xl font-bold text-[#C5A880] mb-3">Template AURA</h2>
-            <p className="text-gray-400 mb-8 text-lg">Beleza, Estética e Bem-Estar</p>
-            <div className="flex gap-3 mb-12 flex-wrap justify-center">
-              <span className="px-4 py-2 bg-white/10 rounded-full text-sm font-semibold tracking-wide">Barbearia</span>
-              <span className="px-4 py-2 bg-white/10 rounded-full text-sm font-semibold tracking-wide">Salão</span>
-              <span className="px-4 py-2 bg-white/10 rounded-full text-sm font-semibold tracking-wide">Manicure</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <Link href="/aura" className="p-16 border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 rounded-[2.5rem] flex flex-col items-center text-center group h-full hover:shadow-[0_0_40px_rgba(197,168,128,0.15)] hover:-translate-y-2 relative overflow-hidden">
+            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#C5A880] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <h2 className="text-4xl font-bold text-[#C5A880] mb-4">Template AURA</h2>
+            <p className="text-gray-400 mb-10 text-xl">Beleza, Estética e Bem-Estar</p>
+            <div className="flex gap-4 mb-14 flex-wrap justify-center">
+              <span className="px-5 py-2.5 bg-white/10 rounded-full text-sm font-semibold tracking-wide border border-white/5">Barbearia</span>
+              <span className="px-5 py-2.5 bg-white/10 rounded-full text-sm font-semibold tracking-wide border border-white/5">Salão</span>
+              <span className="px-5 py-2.5 bg-white/10 rounded-full text-sm font-semibold tracking-wide border border-white/5">Manicure</span>
             </div>
-            <div className="mt-auto px-8 py-4 bg-[#FF0054] text-white font-black rounded-full uppercase tracking-widest text-sm flex items-center gap-3 group-hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,0,84,0.3)]">
-              Ver Template <ArrowRight className="w-5 h-5" />
+            <div className="mt-auto px-10 py-5 bg-gradient-to-r from-[#FF0054] to-[#ff2a70] text-white font-black rounded-full uppercase tracking-[0.2em] text-sm flex items-center gap-3 group-hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(255,0,84,0.4)] group-hover:shadow-[0_0_40px_rgba(255,0,84,0.6)]">
+              Ver Template <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
-          <div className="p-12 border border-white/5 bg-black/20 rounded-3xl flex flex-col items-center text-center opacity-50 cursor-not-allowed h-full">
-            <h2 className="text-3xl font-bold text-gray-500 mb-3">Template OBRA</h2>
-            <p className="text-gray-500 mb-8 text-lg">Engenharia, Construção e Arquitetura</p>
-            <div className="mt-auto px-8 py-4 bg-white/5 text-gray-500 font-black rounded-full uppercase tracking-widest text-sm">
+          <div className="p-16 border border-white/5 bg-black/20 rounded-[2.5rem] flex flex-col items-center text-center opacity-60 cursor-not-allowed h-full relative overflow-hidden">
+            <h2 className="text-4xl font-bold text-gray-500 mb-4">Template OBRA</h2>
+            <p className="text-gray-500 mb-10 text-xl">Engenharia, Construção e Arquitetura</p>
+            <div className="mt-auto px-10 py-5 bg-white/5 border border-white/10 text-gray-400 font-black rounded-full uppercase tracking-[0.2em] text-sm">
               Em Breve
             </div>
           </div>
