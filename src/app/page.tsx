@@ -4,19 +4,19 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0A1128] text-white flex flex-col items-center pt-12 md:pt-24 p-6 md:p-10">
+    <main className="min-h-screen bg-[#0A1128] text-white flex flex-col items-center pt-16 md:pt-28 p-6 md:p-10">
       <div className="max-w-[1200px] text-center w-full flex flex-col items-center">
         
         {/* LOGO DA OK COMUNICA */}
-        <div className="flex justify-center mb-16 md:mb-20">
+        <div className="flex justify-center mb-12 md:mb-16">
           <a href="https://okcomunica.com.br" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform">
             <img src="/logo.png" alt="OK Comunica" className="h-24 md:h-32 object-contain" />
           </a>
         </div>
 
         {/* HEADLINE E SUBTÍTULO */}
-        <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight whitespace-nowrap text-center">Modelos de Templates</h1>
-        <p className="text-lg md:text-xl text-gray-400 mb-24 md:mb-32 max-w-3xl mx-auto px-4 text-center">Selecione um dos Super-Templates abaixo para visualizar a demonstração dinâmica.</p>
+        <h1 className="text-5xl md:text-7xl font-black mb-8 md:mb-10 tracking-tight whitespace-nowrap text-center">Modelos de Templates</h1>
+        <p className="text-lg md:text-xl text-gray-400 mb-20 md:mb-28 max-w-3xl mx-auto px-4 text-center">Selecione um dos Super-Templates abaixo para visualizar a demonstração dinâmica.</p>
         
         {/* GRADES DOS TEMPLATES */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 w-full max-w-5xl mx-auto">
