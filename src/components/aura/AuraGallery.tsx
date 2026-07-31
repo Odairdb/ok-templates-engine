@@ -51,7 +51,7 @@ export default function AuraGallery({ niche }: { niche: string }) {
     <section id="portfolio" ref={containerRef} className="bg-white relative flex flex-col items-center w-full overflow-hidden" style={{ paddingTop: '120px', paddingBottom: '160px' }}>
       <div className="w-full max-w-[1200px] mx-auto px-6 md:px-16 lg:px-20 relative z-10">
         
-        <div className="flex flex-col items-center text-center mb-32 md:mb-48 pt-10">
+        <div className="flex flex-col items-center text-center" style={{ marginBottom: '120px', paddingTop: '40px' }}>
           <div className="max-w-3xl">
             <span className="text-[#C5A880] font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Nosso Legado</span>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#1A1A1A] mb-8">Obras de Arte Reais</h2>
@@ -61,7 +61,7 @@ export default function AuraGallery({ niche }: { niche: string }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12 md:mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" style={{ marginTop: '160px' }}>
           {images.map((src, index) => (
             <motion.div 
               key={index}
