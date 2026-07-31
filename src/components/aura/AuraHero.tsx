@@ -133,7 +133,7 @@ export default function AuraHero({ initialNiche }: { initialNiche: string }) {
               </p>
 
               <div className="flex flex-wrap items-center gap-6" style={{ marginTop: '70px' }}>
-                <a href="#agendar" className="inline-flex items-center justify-center bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-black text-xl uppercase tracking-widest transition-transform hover:scale-105 shadow-[0_0_30px_rgba(139,38,38,0.6)]" style={{ padding: '20px 48px' }}>
+                <a href="#agendar" className="inline-flex items-center justify-center bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-black text-sm uppercase tracking-[0.2em] transition-transform hover:scale-105 shadow-[0_0_30px_rgba(139,38,38,0.6)]" style={{ padding: '20px 48px' }}>
                   Agendar Horário
                 </a>
               </div>

@@ -92,7 +92,7 @@ export default function AuraTeam({ niche }: { niche: string }) {
                   </p>
                   
                   <div className={`flex ${!isImageLeft ? 'md:justify-end' : 'justify-start'}`}>
-                    <a href="#agendar" className="inline-block bg-[#C5A880] hover:bg-[#b0946f] text-white font-bold rounded-full text-xs uppercase tracking-wider transition-all shadow-md px-6 py-3">
+                    <a href="#agendar" className="inline-block bg-[#C5A880] hover:bg-[#b0946f] text-white font-bold rounded-full text-xs uppercase tracking-[0.2em] transition-all shadow-md px-8 py-4">
                       Saber Mais
                     </a>
                   </div>
@@ -103,7 +103,7 @@ export default function AuraTeam({ niche }: { niche: string }) {
         </div>
         
         <div className="mt-24 text-center">
-            <a href="#equipe" className="inline-flex items-center justify-center bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-black text-sm uppercase tracking-widest transition-transform hover:scale-105 shadow-[0_0_20px_rgba(139,38,38,0.4)] px-10 py-4">
+            <a href="#equipe" className="inline-flex items-center justify-center bg-[#8B2626] hover:bg-[#6e1e1e] text-white rounded-full font-black text-sm uppercase tracking-[0.2em] transition-transform hover:scale-105 shadow-[0_0_20px_rgba(139,38,38,0.4)]" style={{ padding: '20px 48px' }}>
               Ver Toda a Equipe
             </a>
         </div>
