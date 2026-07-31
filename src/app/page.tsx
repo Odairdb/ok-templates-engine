@@ -34,14 +34,14 @@ export default function Home() {
             </div>
             
             {/* Horizontal Buttons */}
-            <div className="flex justify-center w-full flex-wrap" style={{ gap: '20px' }}>
-              <Link href="/aura?nicho=salao" className="bg-[#FF0054] hover:bg-[#D40045] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '16px 32px', fontSize: '13px' }}>
+            <div className="flex justify-center w-full flex-wrap" style={{ gap: '12px' }}>
+              <Link href="/aura?nicho=salao" className="bg-[#FF0054] hover:bg-[#D40045] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
                 Salão de Beleza
               </Link>
-              <Link href="/aura?nicho=barbearia" className="bg-[#FF0054] hover:bg-[#D40045] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '16px 32px', fontSize: '13px' }}>
+              <Link href="/aura?nicho=barbearia" className="bg-[#FF0054] hover:bg-[#D40045] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
                 Barbearia
               </Link>
-              <Link href="/aura?nicho=manicure" className="bg-[#FF0054] hover:bg-[#D40045] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '16px 32px', fontSize: '13px' }}>
+              <Link href="/aura?nicho=manicure" className="bg-[#FF0054] hover:bg-[#D40045] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
                 Manicure
               </Link>
             </div>
