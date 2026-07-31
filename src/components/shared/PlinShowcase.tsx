@@ -18,11 +18,11 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
     <section className="bg-[#0A1128] text-white relative overflow-hidden" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
       
       {/* BRIDGE / TRANSITION HEADER */}
-      <div className="w-full max-w-[1200px] mx-auto text-center mb-24 px-6 md:px-10 lg:px-20 relative z-10">
-        <h2 className="text-3xl md:text-5xl lg:text-[54px] font-black mb-6 leading-tight">
+      <div className="w-full max-w-[1000px] mx-auto flex flex-col items-center justify-center text-center mb-24 px-6 md:px-10 relative z-10">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-center w-full">
           {businessName} já tem agendamento <span className="text-[#FF0054]">online</span> de clientes?
         </h2>
-        <p className="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto">
+        <p className="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto text-center">
           Esqueça as planilhas manuais e o caos no WhatsApp. Conheça a inteligência que vai profissionalizar o seu atendimento.
         </p>
       </div>
