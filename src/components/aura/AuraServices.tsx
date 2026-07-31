@@ -42,40 +42,55 @@ export default function AuraServices({ niche }: { niche: string }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div 
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-gray-100 cursor-pointer shadow-lg hover:shadow-2xl transition-all"
-            >
-              <img 
-                src={service.img} 
-                alt={service.title} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
-              
-              {/* Floating Tag */}
-              <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-full shadow-sm" style={{ padding: '12px 24px' }}>
-                <span className="text-xs font-bold text-[#1A1A1A] uppercase tracking-wider">{service.title}</span>
-              </div>
-              
-              {/* Bottom Content */}
-              <div className="absolute bottom-6 left-6 right-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-[#C5A880] text-sm font-bold uppercase tracking-widest mb-1">{service.tag}</p>
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-serif text-white">{service.title}</h3>
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                    →
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8" id="servicos">
+          {services.map((service, index) => {
+            let spanClass = "";
+            let aspectClass = "";
+            
+            if (index === 0) {
+              spanClass = "md:col-span-7";
+              aspectClass = "aspect-[4/5] md:aspect-auto md:min-h-[550px]";
+            } else if (index === 1) {
+              spanClass = "md:col-span-5";
+              aspectClass = "aspect-[4/5] md:aspect-auto md:min-h-[550px]";
+            } else if (index === 2) {
+              spanClass = "md:col-span-12";
+              aspectClass = "aspect-[4/3] md:aspect-[21/9]";
+            }
+
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: index * 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+                className={`group relative overflow-hidden rounded-[2.5rem] bg-gray-100 cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 ${spanClass} ${aspectClass}`}
+              >
+                <img 
+                  src={service.img} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-700"></div>
+                
+                {/* Floating Tag */}
+                <div className="absolute top-8 left-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-sm overflow-hidden" style={{ padding: '8px 20px' }}>
+                  <span className="text-[10px] font-black text-white uppercase tracking-[0.2em] relative z-10">{service.tag}</span>
+                </div>
+                
+                {/* Bottom Content */}
+                <div className="absolute bottom-8 left-8 right-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out flex items-end justify-between">
+                  <div>
+                    <h3 className="text-3xl md:text-4xl font-serif text-white">{service.title}</h3>
+                  </div>
+                  <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100 transform translate-x-4 group-hover:translate-x-0">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
         
         <div className="mt-16 text-center" style={{ marginTop: '80px' }}>

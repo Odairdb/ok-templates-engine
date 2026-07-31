@@ -1,5 +1,6 @@
 import React from 'react';
 import AuraHero from '@/components/aura/AuraHero';
+import AuraHeader from '@/components/aura/AuraHeader';
 import AuraServices from '@/components/aura/AuraServices';
 import AuraGallery from '@/components/aura/AuraGallery';
 import AuraTeam from '@/components/aura/AuraTeam';
@@ -19,6 +20,7 @@ export default async function AuraTemplate({ searchParams }: PageProps) {
 
   return (
     <main className="min-h-screen bg-[#FDFBF7] text-gray-900 font-sans relative">
+      <AuraHeader niche={niche} />
       <AuraHero initialNiche={niche} />
       <AuraServices niche={niche} />
       <AuraGallery niche={niche} />
