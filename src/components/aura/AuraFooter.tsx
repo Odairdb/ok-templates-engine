@@ -49,7 +49,7 @@ export default function AuraFooter({ niche }: { niche: string }) {
                 <span className="px-4 py-2 bg-[#C5A880] text-white text-sm font-bold rounded-full">Como chegar</span>
              </div>
              {/* Em um site real, aqui entraria o iframe do Google Maps */}
-             <img src="/images/GOOGLE-MAPS-01.jpg" alt="Mapa da Cidade" className="w-full h-full object-cover opacity-60 grayscale" />
+             <img src="/images/GOOGLE-MAPS-01.jpg" alt="Mapa da Cidade" className="w-full h-full object-cover" />
           </div>
         </div>
 
