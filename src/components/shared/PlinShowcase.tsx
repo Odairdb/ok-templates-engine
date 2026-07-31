@@ -2,10 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { Calendar, Users, TrendingUp, Sparkles } from 'lucide-react';
 
 export default function PlinShowcase({ niche, templateType }: { niche: string, templateType: string }) {
-  // Map niche to business name for a dynamic transition
   const getBusinessName = () => {
     switch(niche) {
       case 'barbearia': return 'Sua Barbearia';
@@ -18,79 +17,94 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
   const businessName = getBusinessName();
 
   return (
-    <section className="bg-[#0A1128] text-white relative overflow-hidden flex flex-col items-center justify-start pt-32 pb-0">
+    <section className="bg-[#050505] text-white relative overflow-hidden flex flex-col" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
       
-      {/* Background Glows */}
-      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#FF0054] rounded-full blur-[150px] opacity-20 pointer-events-none"></div>
-      
-      <div className="w-full max-w-[1000px] mx-auto flex flex-col items-center text-center relative z-10 px-6 md:px-10">
+      <div className="w-full max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16 relative z-20">
         
-        {/* Eyebrow */}
-        <motion.span 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-[#FF0054] font-bold tracking-[0.2em] uppercase text-xs md:text-sm mb-6 block"
-        >
-          {businessName} já tem agendamento online?
-        </motion.span>
-        
-        {/* Main Headline */}
-        <motion.h2 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-4xl md:text-6xl lg:text-[72px] font-black mb-8 leading-[1.1] tracking-tight drop-shadow-xl"
-        >
-          Mais do que um Site. <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">O Controle Total.</span>
-        </motion.h2>
-        
-        {/* Subtitle */}
-        <motion.p 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-12"
-        >
-          Esqueça as planilhas manuais. Nossos sites vêm equipados com a inteligência do <strong>Sistema Plin</strong>. Gerencie agendamentos, clientes e fluxo de caixa em um painel magistralmente integrado.
-        </motion.p>
-        
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mb-20 md:mb-32"
-        >
-          <a href="https://wa.me/5531973516770?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Sistema%20Plin%20e%20os%20templates%20de%20sites!" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white rounded-full font-black text-sm uppercase tracking-[0.2em] transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.1)] px-10 py-5">
-            Testar Sistema Plin <ArrowRight className="w-5 h-5 text-[#FF0054]" />
-          </a>
-        </motion.div>
+        {/* TOP ROW: HEADLINE & CTA */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          {/* Left: Huge Headline */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col"
+          >
+            <h2 className="text-5xl md:text-6xl lg:text-[72px] font-black leading-[1.1] tracking-tight text-white">
+              {businessName} já tem agendamento <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-[#ff7eb3]">online?</span>
+            </h2>
+          </motion.div>
+
+          {/* Right: Paragraph and Buttons */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="flex flex-col pt-2 lg:pt-4"
+          >
+            <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+              O <strong>Sistema PLIN</strong> escuta, entende e transforma o caos do WhatsApp em agendamentos claros — para que nenhum cliente se perca na conversa.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF0054] to-purple-600 hover:opacity-90 text-white rounded-xl font-bold text-sm transition-all px-8 py-4 shadow-[0_0_20px_rgba(255,0,84,0.4)]">
+                <Sparkles className="w-4 h-4" /> Começar Grátis
+              </a>
+              <a href="#" className="inline-flex items-center gap-2 bg-transparent hover:bg-white/5 border border-white/20 text-white rounded-xl font-bold text-sm transition-all px-8 py-4">
+                 Ver Demonstração
+              </a>
+            </div>
+          </motion.div>
+        </div>
       </div>
 
-      {/* 3D Mockup */}
-      <div className="w-full relative z-20 flex justify-center mt-auto" style={{ perspective: '1200px' }}>
-        <motion.div
-          initial={{ opacity: 0, y: 150, rotateX: 25 }}
-          whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-          viewport={{ once: true, margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-[1100px] px-4 md:px-10 translate-y-[2%]"
-        >
-          <div className="bg-black/40 border border-white/10 rounded-t-3xl md:rounded-t-[2.5rem] p-3 md:p-6 backdrop-blur-3xl shadow-[0_-20px_60px_rgba(0,0,0,0.6)] relative overflow-hidden">
-             {/* Inner Glow to make it pop */}
-             <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/5 pointer-events-none"></div>
-             
-            <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" 
-              alt="Dashboard Mockup" 
-              className="w-full h-auto object-cover rounded-t-xl md:rounded-t-3xl shadow-2xl opacity-90 border-t border-white/20" 
-            />
-          </div>
-        </motion.div>
+      {/* MIDDLE ROW: ABSTRACT GLOW / HORIZON */}
+      <div className="relative w-full h-[400px] md:h-[500px] mt-10 overflow-hidden pointer-events-none z-10 flex items-center justify-center">
+        {/* Core light bloom */}
+        <div className="absolute right-[10%] top-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#FF0054] rounded-full blur-[120px] opacity-50 mix-blend-screen"></div>
+        <div className="absolute left-[20%] top-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-purple-600 rounded-full blur-[100px] opacity-30 mix-blend-screen"></div>
+        
+        {/* Sweeping horizon lines simulated with squashed borders */}
+        <div className="absolute w-[200%] h-[800px] border-t-[4px] border-white/80 rounded-[100%] shadow-[0_-10px_40px_rgba(255,0,84,1)] opacity-80 mix-blend-screen" style={{ top: '60%', left: '-50%', transform: 'rotate(-3deg)' }}></div>
+        <div className="absolute w-[200%] h-[900px] border-t-[2px] border-[#FF0054] rounded-[100%] shadow-[0_-5px_20px_rgba(180,0,200,0.8)] opacity-60 mix-blend-screen" style={{ top: '65%', left: '-50%', transform: 'rotate(-5deg)' }}></div>
+        <div className="absolute w-[200%] h-[1000px] border-t-[1px] border-purple-400 rounded-[100%] opacity-30 mix-blend-screen" style={{ top: '68%', left: '-50%', transform: 'rotate(-2deg)' }}></div>
+        
+        {/* The intense star/flare on the right */}
+        <div className="absolute right-[15%] top-[55%] w-[100px] h-[2px] bg-white shadow-[0_0_20px_#fff] rotate-45"></div>
+        <div className="absolute right-[15%] top-[55%] w-[100px] h-[2px] bg-white shadow-[0_0_20px_#fff] -rotate-45"></div>
+        <div className="absolute right-[15%] top-[55%] w-[10px] h-[10px] bg-white rounded-full shadow-[0_0_40px_20px_rgba(255,255,255,0.8)]"></div>
+      </div>
+
+      {/* BOTTOM ROW: 3 FEATURES GRID */}
+      <div className="w-full max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16 relative z-20 -mt-20 md:-mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 border-t border-white/10 pt-12">
+          
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex flex-col border-l border-white/5 pl-6 md:pl-8">
+            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+              <Calendar className="w-5 h-5 text-gray-300" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Agendamento Inteligente</h3>
+            <p className="text-sm text-gray-400 leading-relaxed">Sua agenda funcionando 24h por dia, recebendo marcações automaticamente sem você mover um dedo.</p>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col border-l border-white/5 pl-6 md:pl-8">
+            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+              <Users className="w-5 h-5 text-gray-300" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Ação, não apenas anotação</h3>
+            <p className="text-sm text-gray-400 leading-relaxed">Histórico de clientes, preferências e taxas de retorno. Saiba exatamente quem senta na sua cadeira.</p>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col border-l border-white/5 pl-6 md:pl-8">
+            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+              <TrendingUp className="w-5 h-5 text-gray-300" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Integração Financeira</h3>
+            <p className="text-sm text-gray-400 leading-relaxed">Fluxo de caixa automático. O sistema calcula seu lucro e comissões de forma transparente e em tempo real.</p>
+          </motion.div>
+
+        </div>
       </div>
 
     </section>
