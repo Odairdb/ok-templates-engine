@@ -19,10 +19,10 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
   return (
     <section className="bg-[#050505] text-white relative overflow-hidden flex flex-col" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
       
-      <div className="w-full max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16 relative z-20">
+      <div className="w-full max-w-[1000px] mx-auto px-8 md:px-12 lg:px-0 relative z-20">
         
         {/* TOP ROW: HEADLINE & CTA */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left: Huge Headline */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             viewport={{ once: true }}
             className="flex flex-col"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-[72px] font-black leading-[1.1] tracking-tight text-white">
+            <h2 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-tight text-white">
               {businessName} já tem agendamento <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-[#ff7eb3]">online?</span>
             </h2>
@@ -44,7 +44,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             transition={{ delay: 0.1 }}
             className="flex flex-col pt-2 lg:pt-4"
           >
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+            <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8">
               O <strong>Sistema PLIN</strong> escuta, entende e transforma o caos do WhatsApp em agendamentos claros — para que nenhum cliente se perca na conversa.
             </p>
             <div className="flex flex-wrap items-center gap-4">
@@ -77,10 +77,10 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
       </div>
 
       {/* BOTTOM ROW: 3 FEATURES GRID */}
-      <div className="w-full max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16 relative z-20 -mt-20 md:-mt-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 border-t border-white/10 pt-12">
+      <div className="w-full max-w-[1000px] mx-auto px-8 md:px-12 lg:px-0 relative z-20 -mt-20 md:-mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-white/10 pt-12">
           
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex flex-col border-l border-white/5 pl-6 md:pl-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex flex-col">
             <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
               <Calendar className="w-5 h-5 text-gray-300" />
             </div>
@@ -88,7 +88,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             <p className="text-sm text-gray-400 leading-relaxed">Sua agenda funcionando 24h por dia, recebendo marcações automaticamente sem você mover um dedo.</p>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col border-l border-white/5 pl-6 md:pl-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
             <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
               <Users className="w-5 h-5 text-gray-300" />
             </div>
@@ -96,7 +96,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             <p className="text-sm text-gray-400 leading-relaxed">Histórico de clientes, preferências e taxas de retorno. Saiba exatamente quem senta na sua cadeira.</p>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col border-l border-white/5 pl-6 md:pl-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
             <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
               <TrendingUp className="w-5 h-5 text-gray-300" />
             </div>
