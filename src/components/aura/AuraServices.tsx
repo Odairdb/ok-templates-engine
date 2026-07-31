@@ -9,7 +9,7 @@ const nicheServices = {
     { title: "Penteados", tag: "Eventos", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
     { title: "Cortes", tag: "Premium", img: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop" },
     { title: "Coloração", tag: "Transformação", img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop" },
-    { title: "Maquiagem", tag: "Beleza", img: "https://images.unsplash.com/photo-1516975080661-46dcbdac6708?q=80&w=600&auto=format&fit=crop" },
+    { title: "Maquiagem", tag: "Beleza", img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600&auto=format&fit=crop" },
   ],
   barbearia: [
     { title: "Design de Barba", tag: "Clássico", img: "https://images.unsplash.com/photo-1503951458645-643d53bfd90f?q=80&w=600&auto=format&fit=crop" },
@@ -23,7 +23,7 @@ const nicheServices = {
     { title: "Penteados", tag: "Eventos", img: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" },
     { title: "Cortes", tag: "Premium", img: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop" },
     { title: "Coloração", tag: "Transformação", img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop" },
-    { title: "Maquiagem", tag: "Beleza", img: "https://images.unsplash.com/photo-1516975080661-46dcbdac6708?q=80&w=600&auto=format&fit=crop" },
+    { title: "Maquiagem", tag: "Beleza", img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600&auto=format&fit=crop" },
   ],
   manicure: [
     { title: "Spa das Mãos", tag: "Cuidado", img: "https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=600&auto=format&fit=crop" },
