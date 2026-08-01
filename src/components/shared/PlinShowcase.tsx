@@ -28,7 +28,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col"
+            className="flex flex-col lg:pl-16"
           >
             <h2 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-tight text-white">
               {businessName} já tem agendamento <br/>
@@ -49,10 +49,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF0054] to-purple-600 hover:opacity-90 text-white rounded-xl font-bold text-sm transition-all px-8 py-4 shadow-[0_0_20px_rgba(255,0,84,0.4)]">
-                <Sparkles className="w-4 h-4" /> Começar Grátis
-              </a>
-              <a href="#" className="inline-flex items-center gap-2 bg-transparent hover:bg-white/5 border border-white/20 text-white rounded-xl font-bold text-sm transition-all px-8 py-4">
-                 Ver Demonstração
+                <Sparkles className="w-4 h-4" /> Chama no Whatsapp
               </a>
             </div>
           </motion.div>
