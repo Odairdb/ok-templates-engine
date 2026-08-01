@@ -28,7 +28,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:pl-16"
+            className="flex flex-col lg:pl-24 xl:pl-32"
           >
             <h2 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-tight text-white">
               {businessName} já tem agendamento <br/>
@@ -48,8 +48,8 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
               O <strong>Sistema PLIN</strong> escuta, entende e transforma o caos do WhatsApp em agendamentos claros — para que nenhum cliente se perca na conversa.
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF0054] to-purple-600 hover:opacity-90 text-white rounded-xl font-bold text-sm transition-all px-8 py-4 shadow-[0_0_20px_rgba(255,0,84,0.4)]">
-                <Sparkles className="w-4 h-4" /> Chama no Whatsapp
+              <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center bg-[#FF0054] hover:bg-[#D00045] text-white rounded-full font-black text-sm uppercase tracking-[0.15em] transition-transform hover:scale-105 shadow-[0_0_30px_rgba(255,0,84,0.6)] px-10 py-5">
+                CHAMA NO WHATSAPP
               </a>
             </div>
           </motion.div>
