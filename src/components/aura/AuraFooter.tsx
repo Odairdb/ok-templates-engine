@@ -53,7 +53,7 @@ export default function AuraFooter({ niche }: { niche: string }) {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        <div className="border-t border-white/10 pt-12 mt-12 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} AURA. Todos os direitos reservados.</p>
           <div className="mt-4 md:mt-0 flex items-center gap-2">
             <span>Desenvolvido por</span>
