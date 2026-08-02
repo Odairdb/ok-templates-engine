@@ -31,7 +31,8 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             className="flex flex-col"
           >
             <h2 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-tight text-white">
-              {businessName} já tem agendamento <br/>
+              {businessName} já tem <br/>
+              agendamento <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-[#ff7eb3]">online?</span>
             </h2>
           </motion.div>
@@ -56,21 +57,80 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
         </div>
       </div>
 
-      {/* MIDDLE ROW: ABSTRACT GLOW / HORIZON */}
-      <div className="relative w-full h-[400px] md:h-[500px] mt-10 overflow-hidden pointer-events-none z-10 flex items-center justify-center">
-        {/* Core light bloom */}
-        <div className="absolute right-[10%] top-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#FF0054] rounded-full blur-[120px] opacity-50 mix-blend-screen"></div>
-        <div className="absolute left-[20%] top-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-purple-600 rounded-full blur-[100px] opacity-30 mix-blend-screen"></div>
+      {/* MIDDLE ROW: ANIMATED GRAPH */}
+      <div className="relative w-full h-[400px] md:h-[450px] mt-16 overflow-hidden z-10 flex items-center justify-center pointer-events-none">
         
-        {/* Sweeping horizon lines simulated with squashed borders */}
-        <div className="absolute w-[200%] h-[800px] border-t-[4px] border-white/80 rounded-[100%] shadow-[0_-10px_40px_rgba(255,0,84,1)] opacity-80 mix-blend-screen" style={{ top: '60%', left: '-50%', transform: 'rotate(-3deg)' }}></div>
-        <div className="absolute w-[200%] h-[900px] border-t-[2px] border-[#FF0054] rounded-[100%] shadow-[0_-5px_20px_rgba(180,0,200,0.8)] opacity-60 mix-blend-screen" style={{ top: '65%', left: '-50%', transform: 'rotate(-5deg)' }}></div>
-        <div className="absolute w-[200%] h-[1000px] border-t-[1px] border-purple-400 rounded-[100%] opacity-30 mix-blend-screen" style={{ top: '68%', left: '-50%', transform: 'rotate(-2deg)' }}></div>
+        {/* Background Gradients */}
+        <div className="absolute right-[20%] top-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#FF0054] rounded-full blur-[120px] opacity-20 mix-blend-screen"></div>
+        <div className="absolute left-[20%] top-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-purple-600 rounded-full blur-[100px] opacity-20 mix-blend-screen"></div>
         
-        {/* The intense star/flare on the right */}
-        <div className="absolute right-[15%] top-[55%] w-[100px] h-[2px] bg-white shadow-[0_0_20px_#fff] rotate-45"></div>
-        <div className="absolute right-[15%] top-[55%] w-[100px] h-[2px] bg-white shadow-[0_0_20px_#fff] -rotate-45"></div>
-        <div className="absolute right-[15%] top-[55%] w-[10px] h-[10px] bg-white rounded-full shadow-[0_0_40px_20px_rgba(255,255,255,0.8)]"></div>
+        {/* Animated SVG Graph */}
+        <div className="w-full max-w-[1000px] mx-auto px-6 relative h-full flex items-end pb-10">
+          
+          {/* Faint Grid Lines */}
+          <div className="absolute inset-0 flex flex-col justify-between pt-10 pb-10 opacity-10">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="w-full border-b border-white border-dashed"></div>
+            ))}
+          </div>
+
+          <svg className="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 1000 300">
+            {/* The Line */}
+            <motion.path
+              d="M0,280 C150,280 250,150 400,180 C550,210 650,80 800,90 C900,100 950,20 1000,0"
+              fill="none"
+              stroke="url(#gradientLine)"
+              strokeWidth="6"
+              strokeLinecap="round"
+              initial={{ pathLength: 0, opacity: 0 }}
+              whileInView={{ pathLength: 1, opacity: 1 }}
+              transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
+              className="drop-shadow-[0_0_15px_rgba(255,0,84,0.8)]"
+            />
+            
+            {/* Gradient for Line */}
+            <defs>
+              <linearGradient id="gradientLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#ff7eb3" />
+                <stop offset="50%" stopColor="#FF0054" />
+                <stop offset="100%" stopColor="#9d00ff" />
+              </linearGradient>
+            </defs>
+
+            {/* Glowing Dots */}
+            {[
+              { cx: 400, cy: 180, delay: 1 },
+              { cx: 800, cy: 90, delay: 2 },
+              { cx: 1000, cy: 0, delay: 3 }
+            ].map((dot, i) => (
+              <motion.circle
+                key={i}
+                cx={dot.cx}
+                cy={dot.cy}
+                r="8"
+                fill="#FFF"
+                className="drop-shadow-[0_0_10px_#fff]"
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ delay: dot.delay, duration: 0.5, repeat: Infinity, repeatType: "reverse", repeatDelay: 2.5 }}
+              />
+            ))}
+          </svg>
+
+          {/* Floating UI Elements simulating a dashboard */}
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 2, duration: 0.8 }}
+            className="absolute right-[5%] top-[20%] bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-xl"
+          >
+            <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Crescimento Mensal</p>
+            <p className="text-3xl font-black text-white flex items-center gap-2">
+              +48% <TrendingUp className="text-[#FF0054] w-6 h-6" />
+            </p>
+          </motion.div>
+
+        </div>
       </div>
 
       {/* BOTTOM ROW: 3 FEATURES GRID */}
