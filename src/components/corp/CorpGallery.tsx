@@ -86,4 +86,3 @@ export default function CorpGallery({ niche }: { niche: string }) {
     </section>
   );
 }
-

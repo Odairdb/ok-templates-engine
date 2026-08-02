@@ -170,5 +170,3 @@ export default function CorpHero({ initialNiche }: { initialNiche: string }) {
     </section>
   );
 }
-
-

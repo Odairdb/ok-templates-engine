@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 
 const nicheServices = {
   default: [
-    { title: "Direito Societ�rio", tag: "Cálculo", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
+    { title: "Direito Societário", tag: "Cálculo", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
     { title: "Laudos Técnicos", tag: "Perícia", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
     { title: "Execução de Corp", tag: "Gestão", img: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop" },
-    { title: "Reformas", tag: "Revitalização", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" },
+    { title: "Reformas", tag: "Revitalização", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" },
     { title: "Instalações", tag: "Infraestrutura", img: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop" },
   ],
   arquitetura: [
@@ -22,14 +22,14 @@ const nicheServices = {
     { title: "Construção do Zero", tag: "Fundação", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
     { title: "Empreendimentos", tag: "Incorporação", img: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop" },
     { title: "Gerenciamento", tag: "Gestão", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
-    { title: "Reformas Corporativas", tag: "Empresas", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" },
+    { title: "Reformas Corporativas", tag: "Empresas", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" },
     { title: "Infraestrutura", tag: "Urbanismo", img: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop" },
   ],
   engenharia: [
-    { title: "Direito Societ�rio", tag: "Cálculo", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
+    { title: "Direito Societário", tag: "Cálculo", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
     { title: "Laudos Técnicos", tag: "Perícia", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
     { title: "Execução de Corp", tag: "Gestão", img: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop" },
-    { title: "Reforço Estrutural", tag: "Segurança", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" },
+    { title: "Reforço Estrutural", tag: "Segurança", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" },
     { title: "Instalações", tag: "Infraestrutura", img: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop" },
   ]
 };
@@ -43,7 +43,7 @@ export default function CorpServices({ niche }: { niche: string }) {
         
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '60px' }}>
           <div style={{ maxWidth: '800px' }}>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontFamily: 'Times New Roman, serif', color: '#FFFFFF', marginBottom: '32px', fontWeight: 400 }}>�reas de Atua��o</h2>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontFamily: 'Times New Roman, serif', color: '#FFFFFF', marginBottom: '32px', fontWeight: 400 }}>Áreas de Atuação</h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.125rem', lineHeight: 1.6, padding: '0 16px' }}>
               Técnica, estética e precisão. Dominamos cada etapa do processo construtivo para garantir que sua visão se torne realidade com a máxima excelência.
             </p>
@@ -95,5 +95,3 @@ export default function CorpServices({ niche }: { niche: string }) {
     </section>
   );
 }
-
-

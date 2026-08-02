@@ -105,4 +105,3 @@ export default function CorpTeam({ niche }: { niche: string }) {
     </section>
   );
 }
-
