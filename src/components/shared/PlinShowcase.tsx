@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Users, TrendingUp, Sparkles } from 'lucide-react';
+import { Calendar, Users, TrendingUp, Sparkles, CalendarClock } from 'lucide-react';
+import BookingWidgetDemo from './BookingWidgetDemo';
 
 export default function PlinShowcase({ niche, templateType }: { niche: string, templateType: string }) {
   const getBusinessName = () => {
@@ -15,6 +16,12 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
   };
 
   const businessName = getBusinessName();
+
+  const demoServices = [
+    { id: "1", name: "Corte Degradê + Barba", duration: 45, price: 65.00 },
+    { id: "2", name: "Sobrancelha na Navalha", duration: 15, price: 15.00 },
+    { id: "3", name: "Limpeza de Pele Express", duration: 30, price: 50.00 }
+  ];
 
   return (
     <section className="bg-[#050505] text-white relative overflow-hidden flex flex-col" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
@@ -160,6 +167,36 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             <h3 className="text-xl font-bold text-white mb-2">Integração Financeira</h3>
             <p className="text-sm text-gray-400 leading-relaxed">Fluxo de caixa automático. O sistema calcula seu lucro e comissões de forma transparente e em tempo real.</p>
           </motion.div>
+
+        </div>
+      </div>
+
+      {/* DEGUSTAÇÃO PREMIUM: EXPERIMENTE NA PRÁTICA */}
+      <div className="w-full max-w-[1200px] mx-auto relative z-20 mt-24" style={{ paddingLeft: '160px', paddingRight: '80px' }}>
+        <div className="border-t border-white/10 pt-20 relative">
+          
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF0054]/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+          <div className="text-center mb-16 relative z-10">
+            <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">Experimente na <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-pink-500">Prática</span></h3>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Interaja com a ferramenta abaixo. Simule um agendamento com dados fictícios e sinta a experiência de conversão instantânea.
+            </p>
+          </div>
+
+          <div className="max-w-md mx-auto relative z-10">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <BookingWidgetDemo 
+                title={businessName}
+                services={demoServices} 
+              />
+            </motion.div>
+          </div>
 
         </div>
       </div>
