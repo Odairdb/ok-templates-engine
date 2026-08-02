@@ -1,93 +1,87 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+const nicheImages = {
+  default: [
+    "https://images.unsplash.com/photo-1590496739988-9d22ffc32ef0?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1541888081622-c2e472061099?q=80&w=800&auto=format&fit=crop"
+  ],
+  arquitetura: [
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1600566753086-00f18efc2294?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop"
+  ],
+  construtora: [
+    "https://images.unsplash.com/photo-1541888081622-c2e472061099?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1590496739988-9d22ffc32ef0?q=80&w=800&auto=format&fit=crop"
+  ],
+  engenharia: [
+    "https://images.unsplash.com/photo-1590496739988-9d22ffc32ef0?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+  ]
+};
 
 export default function ObraGallery({ niche }: { niche: string }) {
+  const images = nicheImages[niche as keyof typeof nicheImages] || nicheImages.default;
+  const containerRef = useRef<HTMLDivElement>(null);
   
-  const getGallery = () => {
-    switch (niche) {
-      case 'arquitetura':
-        return [
-          { url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', title: 'Residência Alphaville' },
-          { url: 'https://images.unsplash.com/photo-1600566753086-00f18efc2294?q=80&w=2070&auto=format&fit=crop', title: 'Cobertura Duplex' },
-          { url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000&auto=format&fit=crop', title: 'Studio Minimalista' }
-        ];
-      case 'construtora':
-        return [
-          { url: 'https://images.unsplash.com/photo-1541888081622-c2e472061099?q=80&w=2070&auto=format&fit=crop', title: 'Edifício Horizon' },
-          { url: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2070&auto=format&fit=crop', title: 'Condomínio Reserva' },
-          { url: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1931&auto=format&fit=crop', title: 'Sede Corporativa' }
-        ];
-      case 'engenharia':
-      default:
-        return [
-          { url: 'https://images.unsplash.com/photo-1590496739988-9d22ffc32ef0?q=80&w=2070&auto=format&fit=crop', title: 'Fundação Profunda' },
-          { url: 'https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=2070&auto=format&fit=crop', title: 'Estrutura Metálica' },
-          { url: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop', title: 'Reforço Estrutural' }
-        ];
-    }
-  };
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
 
-  const images = getGallery();
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, -120]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, 80]);
+
+  const transforms = [y1, y2, y3, y4];
 
   return (
-    <section id="projetos" style={{ backgroundColor: '#E7DFDB', padding: '120px 24px', color: '#3B4146' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+    <section id="portfolio" ref={containerRef} className="bg-[#E7DFDB] relative flex flex-col items-center w-full overflow-hidden" style={{ paddingTop: '120px', paddingBottom: '160px' }}>
+      <div className="w-full max-w-[1200px] mx-auto px-6 md:px-16 lg:px-20 relative z-10">
         
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginBottom: '80px' }}>
-          <span style={{ color: '#967764', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.875rem', marginBottom: '16px' }}>/ Portfólio /</span>
-          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 400, fontFamily: 'Times New Roman, serif', color: '#041E30', margin: '0 0 24px 0', lineHeight: 1.1 }}>
-            Obras Realizadas
-          </h2>
-          <p style={{ maxWidth: '600px', color: '#3B4146', fontSize: '1.125rem', margin: 0 }}>
-            Nossa assinatura está impressa na qualidade dos acabamentos e na solidez de cada fundação. Conheça nossos trabalhos recentes.
-          </p>
+        <div className="flex flex-col items-center text-center" style={{ marginBottom: '120px', paddingTop: '40px' }}>
+          <div className="max-w-3xl">
+            <span className="text-[#967764] font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Nosso Legado</span>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl text-[#041E30] mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>Obras de Arte Reais</h2>
+            <p className="text-[#3B4146] text-lg md:text-xl max-w-2xl mx-auto">
+              Nossa assinatura está impressa na qualidade dos acabamentos e na solidez de cada fundação. Conheça nossos trabalhos recentes.
+            </p>
+          </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-          {images.map((img, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.2, duration: 0.8 }}
-              style={{
-                position: 'relative',
-                borderRadius: '16px',
-                overflow: 'hidden',
-                aspectRatio: '3/4',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-              }}
-              className="group"
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" style={{ marginTop: '160px' }}>
+          {images.map((src, index) => (
+            <motion.div 
+              key={index}
+              style={{ y: transforms[index] }}
+              className={`relative overflow-hidden rounded-sm group shadow-2xl ${
+                index % 2 === 0 ? 'aspect-[3/4] mt-0' : 'aspect-[4/5] mt-12 md:mt-24'
+              }`}
             >
               <img 
-                src={img.url} 
-                alt={img.title} 
-                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} 
-                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                src={src} 
+                alt={`Obra ${index + 1}`} 
+                className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-[1.15]"
               />
-              <div 
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'linear-gradient(to top, rgba(4,30,48,0.8) 0%, rgba(4,30,48,0) 50%)',
-                  display: 'flex',
-                  alignItems: 'flex-end',
-                  padding: '32px',
-                  pointerEvents: 'none'
-                }}
-              >
-                <h3 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 600, margin: 0, fontFamily: 'Times New Roman, serif' }}>
-                  {img.title}
-                </h3>
+              <div className="absolute inset-0 bg-[#041E30]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 backdrop-blur-[2px]">
+                 <span className="text-[#E7DFDB] font-serif italic text-2xl tracking-widest drop-shadow-lg" style={{ fontFamily: 'Times New Roman, serif' }}>Ver Detalhes</span>
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

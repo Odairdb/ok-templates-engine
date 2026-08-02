@@ -2,89 +2,94 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HardHat, PenTool, PencilRuler, Ruler, BrickWall, Sparkles } from 'lucide-react';
+
+const nicheServices = {
+  default: [
+    { title: "Projetos Estruturais", tag: "Cálculo", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" },
+    { title: "Laudos Técnicos", tag: "Perícia", img: "https://images.unsplash.com/photo-1541888081622-c2e472061099?q=80&w=600&auto=format&fit=crop" },
+    { title: "Execução de Obra", tag: "Gestão", img: "https://images.unsplash.com/photo-1590496739988-9d22ffc32ef0?q=80&w=800&auto=format&fit=crop" },
+    { title: "Reformas", tag: "Revitalização", img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" },
+    { title: "Instalações", tag: "Infraestrutura", img: "https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=600&auto=format&fit=crop" },
+  ],
+  arquitetura: [
+    { title: "Projeto Arquitetônico", tag: "Concepção", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" },
+    { title: "Design de Interiores", tag: "Ergonomia", img: "https://images.unsplash.com/photo-1600566753086-00f18efc2294?q=80&w=600&auto=format&fit=crop" },
+    { title: "Maquetes 3D", tag: "Visualização", img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800&auto=format&fit=crop" },
+    { title: "Paisagismo", tag: "Natureza", img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=600&auto=format&fit=crop" },
+    { title: "Acompanhamento", tag: "Fidelidade", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop" },
+  ],
+  construtora: [
+    { title: "Construção do Zero", tag: "Fundação", img: "https://images.unsplash.com/photo-1541888081622-c2e472061099?q=80&w=800&auto=format&fit=crop" },
+    { title: "Empreendimentos", tag: "Incorporação", img: "https://images.unsplash.com/photo-1590496739988-9d22ffc32ef0?q=80&w=600&auto=format&fit=crop" },
+    { title: "Gerenciamento", tag: "Gestão", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" },
+    { title: "Reformas Corporativas", tag: "Empresas", img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" },
+    { title: "Infraestrutura", tag: "Urbanismo", img: "https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=600&auto=format&fit=crop" },
+  ],
+  engenharia: [
+    { title: "Projetos Estruturais", tag: "Cálculo", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" },
+    { title: "Laudos Técnicos", tag: "Perícia", img: "https://images.unsplash.com/photo-1541888081622-c2e472061099?q=80&w=600&auto=format&fit=crop" },
+    { title: "Execução de Obra", tag: "Gestão", img: "https://images.unsplash.com/photo-1590496739988-9d22ffc32ef0?q=80&w=800&auto=format&fit=crop" },
+    { title: "Reforço Estrutural", tag: "Segurança", img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" },
+    { title: "Instalações", tag: "Infraestrutura", img: "https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=600&auto=format&fit=crop" },
+  ]
+};
 
 export default function ObraServices({ niche }: { niche: string }) {
-  
-  const getServices = () => {
-    switch(niche) {
-      case 'arquitetura':
-        return [
-          { icon: <PencilRuler size={32} />, title: "Projeto Arquitetônico", desc: "Design completo, da fachada à divisão inteligente de ambientes." },
-          { icon: <PenTool size={32} />, title: "Design de Interiores", desc: "Ergonomia, paleta de cores e mobiliário sob medida para o seu bem-estar." },
-          { icon: <Sparkles size={32} />, title: "Maquetes 3D & Renders", desc: "Visualização hiper-realista antes do primeiro tijolo ser assentado." }
-        ];
-      case 'construtora':
-        return [
-          { icon: <BrickWall size={32} />, title: "Execução de Obra", desc: "Equipe própria e gestão de ponta a ponta com rigor de cronograma." },
-          { icon: <Ruler size={32} />, title: "Reformas de Alto Padrão", desc: "Transformamos o seu imóvel atual na sua casa dos sonhos." },
-          { icon: <HardHat size={32} />, title: "Gerenciamento", desc: "Fiscalização, compra de materiais e gestão de empreiteiros terceirizados." }
-        ];
-      case 'engenharia':
-      default:
-        return [
-          { icon: <HardHat size={32} />, title: "Projetos Estruturais", desc: "Cálculos precisos garantindo economia de aço e segurança total." },
-          { icon: <Ruler size={32} />, title: "Instalações (Elétrica/Hidráulica)", desc: "Dimensionamento correto para evitar patologias e manutenções futuras." },
-          { icon: <BrickWall size={32} />, title: "Laudos & Perícias", desc: "Vistoria técnica, emissão de ART e diagnósticos estruturais complexos." }
-        ];
-    }
-  };
-
-  const services = getServices();
+  const services = nicheServices[niche as keyof typeof nicheServices] || nicheServices.default;
 
   return (
-    <section id="especialidades" style={{ backgroundColor: '#041E30', padding: '120px 24px', color: '#E7DFDB' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+    <section style={{ backgroundColor: '#041E30', paddingTop: '90px', paddingBottom: '90px', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
         
-        <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 400, fontFamily: 'Times New Roman, serif', color: '#E7DFDB', margin: '0 0 16px 0', lineHeight: 1.1 }}>
-            Nossas<br/>Especialidades
-          </h2>
-          <div style={{ width: '60px', height: '2px', backgroundColor: '#967764', margin: '0 auto 24px auto' }}></div>
-          <p style={{ maxWidth: '600px', margin: '0 auto', color: 'rgba(231,223,219,0.7)', fontSize: '1.125rem' }}>
-            Técnica, estética e precisão. Dominamos cada etapa do processo construtivo para garantir que sua visão se torne realidade.
-          </p>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ maxWidth: '800px' }}>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontFamily: 'Times New Roman, serif', color: '#E7DFDB', marginBottom: '32px', fontWeight: 400 }}>Nossas Especialidades</h2>
+            <p style={{ color: 'rgba(231,223,219,0.7)', fontSize: '1.125rem', lineHeight: 1.6, padding: '0 16px' }}>
+              Técnica, estética e precisão. Dominamos cada etapa do processo construtivo para garantir que sua visão se torne realidade com a máxima excelência.
+            </p>
+          </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
-          
-          {services.map((svc, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.2, duration: 0.8 }}
-              style={{ 
-                backgroundColor: 'rgba(231,223,219,0.05)', 
-                border: '1px solid rgba(231,223,219,0.1)',
-                padding: '48px 32px',
-                borderRadius: '16px',
-                display: 'flex',
-                flexDirection: 'column',
-                transition: 'background-color 0.3s ease, border-color 0.3s ease'
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(231,223,219,0.1)';
-                e.currentTarget.style.borderColor = '#967764';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(231,223,219,0.05)';
-                e.currentTarget.style.borderColor = 'rgba(231,223,219,0.1)';
-              }}
-            >
-              <div style={{ color: '#967764', marginBottom: '24px' }}>
-                {svc.icon}
-              </div>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#E7DFDB', margin: '0 0 16px 0', fontFamily: 'Times New Roman, serif' }}>
-                {svc.title}
-              </h3>
-              <p style={{ color: 'rgba(231,223,219,0.7)', lineHeight: 1.6, margin: 0 }}>
-                {svc.desc}
-              </p>
-            </motion.div>
-          ))}
-          
+        {/* CSS GRID TO MATCH AURA */}
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 md:gap-6 h-auto md:h-[600px] lg:h-[700px]" id="especialidades">
+          {services.map((service, index) => {
+            let layoutClass = "";
+            
+            if (index === 0) layoutClass = "md:col-start-1 md:row-start-1";
+            if (index === 1) layoutClass = "md:col-start-1 md:row-start-2";
+            if (index === 2) layoutClass = "md:col-start-2 md:row-start-1 md:row-span-2";
+            if (index === 3) layoutClass = "md:col-start-3 md:row-start-1";
+            if (index === 4) layoutClass = "md:col-start-3 md:row-start-2";
+
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+                className={`group relative overflow-hidden rounded-[1.5rem] bg-[#3B4146] cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 min-h-[250px] md:min-h-0 ${layoutClass}`}
+              >
+                <img 
+                  src={service.img} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#041E30]/90 via-[#041E30]/40 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500"></div>
+                
+                <div className="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500 ease-out flex flex-col justify-end">
+                  <span className="text-[10px] font-bold text-[#967764] uppercase tracking-[0.15em] mb-1 drop-shadow-md">{service.tag}</span>
+                  <h3 className={`font-serif text-[#E7DFDB] drop-shadow-md ${index === 2 ? 'text-3xl' : 'text-xl'}`} style={{ fontFamily: 'Times New Roman, serif' }}>{service.title}</h3>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+        
+        <div style={{ marginTop: '80px', textAlign: 'center' }}>
+            <a href="#orcamento" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#967764', color: '#fff', borderRadius: '999px', fontWeight: 900, fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.2em', padding: '20px 48px', boxShadow: '0 0 30px rgba(150,119,100,0.4)', textDecoration: 'none', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 0 40px rgba(150,119,100,0.6)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 0 30px rgba(150,119,100,0.4)'; }}>
+              Ver Todos os Serviços
+            </a>
         </div>
       </div>
     </section>

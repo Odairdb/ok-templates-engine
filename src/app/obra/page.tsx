@@ -3,6 +3,7 @@ import ObraHero from '@/components/obra/ObraHero';
 import ObraHeader from '@/components/obra/ObraHeader';
 import ObraServices from '@/components/obra/ObraServices';
 import ObraGallery from '@/components/obra/ObraGallery';
+import ObraTeam from '@/components/obra/ObraTeam';
 import ObraProcess from '@/components/obra/ObraProcess';
 import ObraFooter from '@/components/obra/ObraFooter';
 import PlinShowcase from '@/components/shared/PlinShowcase';
@@ -24,6 +25,7 @@ export default async function ObraTemplate({ searchParams }: PageProps) {
       <ObraHero initialNiche={niche} />
       <ObraServices niche={niche} />
       <ObraGallery niche={niche} />
+      <ObraTeam niche={niche} />
       <ObraProcess niche={niche} />
       <PlinShowcase niche={niche} templateType="obra" />
       <ObraFooter niche={niche} />
