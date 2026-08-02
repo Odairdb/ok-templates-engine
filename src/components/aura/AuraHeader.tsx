@@ -30,11 +30,12 @@ export default function AuraHeader({ niche }: { niche: string }) {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-[#1A1A1A]/70 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/5 py-6" 
-          : "bg-transparent py-10"
+          ? "bg-[#1A1A1A]/70 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/5" 
+          : "bg-transparent"
       }`}
+      style={{ paddingTop: isScrolled ? '24px' : '60px', paddingBottom: isScrolled ? '24px' : '60px' }}
     >
-      <div className="max-w-[1200px] mx-auto px-8 md:px-16 lg:px-20 relative flex items-center justify-between">
+      <div className="w-full max-w-[1200px] mx-auto relative flex items-center justify-between" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
         <Link href={`/aura?nicho=${niche}`} className="flex items-center h-10 relative z-10">
           <span className="text-2xl font-serif font-bold text-[#C5A880] tracking-wider pl-4">AURA</span>
         </Link>

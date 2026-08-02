@@ -19,7 +19,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
   return (
     <section className="bg-[#050505] text-white relative overflow-hidden flex flex-col" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
       
-      <div className="w-full max-w-[1100px] mx-auto px-10 md:px-20 lg:px-24 relative z-20">
+      <div className="w-full max-w-[1200px] mx-auto relative z-20" style={{ paddingLeft: '160px', paddingRight: '80px' }}>
         
         {/* TOP ROW: HEADLINE & CTA */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -28,7 +28,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:pl-24 xl:pl-32"
+            className="flex flex-col"
           >
             <h2 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-tight text-white">
               {businessName} já tem agendamento <br/>
@@ -74,7 +74,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
       </div>
 
       {/* BOTTOM ROW: 3 FEATURES GRID */}
-      <div className="w-full max-w-[1100px] mx-auto px-10 md:px-20 lg:px-24 relative z-20 -mt-20 md:-mt-10">
+      <div className="w-full max-w-[1200px] mx-auto relative z-20 -mt-20 md:-mt-10" style={{ paddingLeft: '160px', paddingRight: '80px' }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-white/10 pt-12">
           
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex flex-col">
