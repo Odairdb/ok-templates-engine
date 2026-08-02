@@ -69,6 +69,31 @@ export default function Home() {
             </div>
           </div>
 
+          {/* CORP Section */}
+          <div className="flex flex-col items-center w-full">
+            {/* Title Box */}
+            <div className="w-full bg-[#FFFFFF]/5 border border-[#8D99AE]/30 rounded-xl py-6 px-4 shadow-xl flex flex-col items-center" style={{ marginBottom: '40px' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#FFFFFF] mb-2 tracking-tight">Template CORP</h2>
+              <p className="text-[#8D99AE] text-base md:text-lg m-0">Advogados, Contadores e Corporativo</p>
+            </div>
+            
+            {/* Horizontal Buttons */}
+            <div className="flex justify-center w-full flex-wrap" style={{ gap: '12px' }}>
+              <Link href="/corp?nicho=advogados" className="bg-[#8D99AE] hover:bg-[#6C7A92] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Advogados
+              </Link>
+              <Link href="/corp?nicho=contadores" className="bg-[#8D99AE] hover:bg-[#6C7A92] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Contadores
+              </Link>
+              <Link href="/corp?nicho=administradores" className="bg-[#8D99AE] hover:bg-[#6C7A92] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Administradores
+              </Link>
+              <Link href="/corp?nicho=economistas" className="bg-[#8D99AE] hover:bg-[#6C7A92] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Economistas
+              </Link>
+            </div>
+          </div>
+
         </div>
       </div>
     </main>
