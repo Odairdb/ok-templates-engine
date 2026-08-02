@@ -126,7 +126,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
           >
             <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Crescimento Mensal</p>
             <p className="text-3xl font-black text-white flex items-center gap-2">
-              +48% <TrendingUp className="text-[#FF0054] w-6 h-6" />
+              +38% <TrendingUp className="text-[#FF0054] w-6 h-6" />
             </p>
           </motion.div>
 
