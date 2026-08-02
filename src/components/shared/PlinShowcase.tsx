@@ -172,19 +172,19 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
       </div>
 
       {/* DEGUSTAÇÃO PREMIUM: EXPERIMENTE NA PRÁTICA */}
-      <div className="w-full max-w-[1200px] mx-auto relative z-20 mt-24" style={{ paddingLeft: '160px', paddingRight: '80px' }}>
-        <div className="border-t border-white/10 pt-20 relative">
+      <div className="w-full max-w-[1200px] mx-auto relative z-20 mt-24" style={{ paddingLeft: '160px', paddingRight: '80px', marginTop: '96px' }}>
+        <div className="border-t border-white/10 pt-20 relative" style={{ paddingTop: '80px' }}>
           
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF0054]/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-          <div className="text-center mb-16 relative z-10">
-            <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">Experimente na <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-pink-500">Prática</span></h3>
+          <div className="text-center mb-16 relative z-10" style={{ marginBottom: '64px', textAlign: 'center' }}>
+            <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4" style={{ marginBottom: '16px' }}>Experimente na <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-pink-500">Prática</span></h3>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               Interaja com a ferramenta abaixo. Simule um agendamento com dados fictícios e sinta a experiência de conversão instantânea.
             </p>
           </div>
 
-          <div className="max-w-md mx-auto relative z-10">
+          <div className="max-w-md mx-auto relative z-10" style={{ maxWidth: '448px', margin: '0 auto' }}>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
