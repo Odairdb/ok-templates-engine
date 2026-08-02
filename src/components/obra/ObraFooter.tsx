@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Hexagon, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Hexagon, Mail, MapPin, Phone, Globe } from 'lucide-react';
 
 export default function ObraFooter({ niche }: { niche: string }) {
   const getLogoText = () => {
@@ -29,10 +29,7 @@ export default function ObraFooter({ niche }: { niche: string }) {
             </p>
             <div style={{ display: 'flex', gap: '16px' }}>
               <a href="#" style={{ color: '#E7DFDB', opacity: 0.7, transition: 'opacity 0.2s' }} onMouseOver={(e) => e.currentTarget.style.opacity = '1'} onMouseOut={(e) => e.currentTarget.style.opacity = '0.7'}>
-                <Instagram size={24} />
-              </a>
-              <a href="#" style={{ color: '#E7DFDB', opacity: 0.7, transition: 'opacity 0.2s' }} onMouseOver={(e) => e.currentTarget.style.opacity = '1'} onMouseOut={(e) => e.currentTarget.style.opacity = '0.7'}>
-                <Linkedin size={24} />
+                <Globe size={24} />
               </a>
             </div>
           </div>
