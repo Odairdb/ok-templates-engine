@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const nicheServices = {
   default: [
-    { title: "Direito Societ�rio", tag: "Cálculo", img: "https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?q=80&w=800&auto=format&fit=crop" },
+    { title: "Direito Societ�rio", tag: "Cálculo", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
     { title: "Laudos Técnicos", tag: "Perícia", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
     { title: "Execução de Corp", tag: "Gestão", img: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop" },
     { title: "Reformas", tag: "Revitalização", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" },
@@ -16,17 +16,17 @@ const nicheServices = {
     { title: "Design de Interiores", tag: "Ergonomia", img: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop" },
     { title: "Maquetes 3D", tag: "Visualização", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" },
     { title: "Paisagismo", tag: "Natureza", img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop" },
-    { title: "Acompanhamento", tag: "Fidelidade", img: "https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?q=80&w=800&auto=format&fit=crop" },
+    { title: "Acompanhamento", tag: "Fidelidade", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
   ],
   construtora: [
     { title: "Construção do Zero", tag: "Fundação", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
     { title: "Empreendimentos", tag: "Incorporação", img: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop" },
-    { title: "Gerenciamento", tag: "Gestão", img: "https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?q=80&w=800&auto=format&fit=crop" },
+    { title: "Gerenciamento", tag: "Gestão", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
     { title: "Reformas Corporativas", tag: "Empresas", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" },
     { title: "Infraestrutura", tag: "Urbanismo", img: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop" },
   ],
   engenharia: [
-    { title: "Direito Societ�rio", tag: "Cálculo", img: "https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?q=80&w=800&auto=format&fit=crop" },
+    { title: "Direito Societ�rio", tag: "Cálculo", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
     { title: "Laudos Técnicos", tag: "Perícia", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
     { title: "Execução de Corp", tag: "Gestão", img: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop" },
     { title: "Reforço Estrutural", tag: "Segurança", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" },
@@ -95,4 +95,5 @@ export default function CorpServices({ niche }: { niche: string }) {
     </section>
   );
 }
+
 
