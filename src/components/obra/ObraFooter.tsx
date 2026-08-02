@@ -83,6 +83,6 @@ export default function ObraFooter({ niche }: { niche: string }) {
         </div>
 
       </div>
-    </section>
+    </footer>
   );
 }
