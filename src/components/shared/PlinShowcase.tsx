@@ -34,7 +34,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
   ];
 
   return (
-    <section className="bg-[#050505] text-white relative overflow-hidden flex flex-col" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
+    <section className={`text-white relative overflow-hidden flex flex-col ${templateType === 'obra' ? 'bg-[#041E30]' : 'bg-[#050505]'}`} style={{ paddingTop: '120px', paddingBottom: '120px' }}>
       
       <div className="w-full max-w-[1200px] mx-auto relative z-20" style={{ paddingLeft: '160px', paddingRight: '80px' }}>
         
@@ -51,7 +51,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
               {businessName} já tem <br/>
               {templateType === 'obra' ? (
                 <>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-[#ff7eb3]">orçamentos</span> <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#967764] to-[#E7DFDB]">orçamentos</span> <br/>
                   online?
                 </>
               ) : (
@@ -77,7 +77,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
                 : "O Sistema PLIN escuta, entende e transforma o caos do WhatsApp em agendamentos claros — para que nenhum cliente se perca na conversa."}
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center bg-[#FF0054] hover:bg-[#D00045] text-white rounded-full font-black text-sm uppercase tracking-[0.15em] transition-transform hover:scale-105 shadow-[0_0_30px_rgba(255,0,84,0.6)] px-10 py-5">
+              <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className={`inline-flex items-center justify-center text-white rounded-full font-black text-sm uppercase tracking-[0.15em] transition-transform hover:scale-105 px-10 py-5 ${templateType === 'obra' ? 'bg-[#967764] hover:bg-[#7a5f4f] shadow-[0_0_30px_rgba(150,119,100,0.6)]' : 'bg-[#FF0054] hover:bg-[#D00045] shadow-[0_0_30px_rgba(255,0,84,0.6)]'}`}>
                 CHAMA NO WHATSAPP
               </a>
             </div>
@@ -89,8 +89,8 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
       <div className="relative w-full h-[400px] md:h-[450px] mt-16 overflow-hidden z-10 flex items-center justify-center pointer-events-none">
         
         {/* Background Gradients */}
-        <div className="absolute right-[20%] top-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#FF0054] rounded-full blur-[120px] opacity-20 mix-blend-screen"></div>
-        <div className="absolute left-[20%] top-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-purple-600 rounded-full blur-[100px] opacity-20 mix-blend-screen"></div>
+        <div className={`absolute right-[20%] top-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full blur-[120px] opacity-20 mix-blend-screen ${templateType === 'obra' ? 'bg-[#967764]' : 'bg-[#FF0054]'}`}></div>
+        <div className={`absolute left-[20%] top-1/2 -translate-y-1/2 w-[400px] h-[200px] rounded-full blur-[100px] opacity-20 mix-blend-screen ${templateType === 'obra' ? 'bg-[#E7DFDB]' : 'bg-purple-600'}`}></div>
         
         {/* Animated SVG Graph */}
         <div className="w-full max-w-[1000px] mx-auto px-6 relative h-full flex items-end pb-10">
@@ -113,15 +113,25 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
               initial={{ pathLength: 0, opacity: 0 }}
               whileInView={{ pathLength: 1, opacity: 1 }}
               transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
-              className="drop-shadow-[0_0_15px_rgba(255,0,84,0.8)]"
+              style={{ filter: templateType === 'obra' ? 'drop-shadow(0 0 15px rgba(150,119,100,0.8))' : 'drop-shadow(0 0 15px rgba(255,0,84,0.8))' }}
             />
             
             {/* Gradient for Line */}
             <defs>
               <linearGradient id="gradientLine" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#ff7eb3" />
-                <stop offset="50%" stopColor="#FF0054" />
-                <stop offset="100%" stopColor="#9d00ff" />
+                {templateType === 'obra' ? (
+                  <>
+                    <stop offset="0%" stopColor="#E7DFDB" />
+                    <stop offset="50%" stopColor="#967764" />
+                    <stop offset="100%" stopColor="#E7DFDB" />
+                  </>
+                ) : (
+                  <>
+                    <stop offset="0%" stopColor="#ff7eb3" />
+                    <stop offset="50%" stopColor="#FF0054" />
+                    <stop offset="100%" stopColor="#9d00ff" />
+                  </>
+                )}
               </linearGradient>
             </defs>
 
@@ -154,7 +164,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
           >
             <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Crescimento Mensal</p>
             <p className="text-3xl font-black text-white flex items-center gap-2">
-              +38% <TrendingUp className="text-[#FF0054] w-6 h-6" />
+              +38% <TrendingUp className={`w-6 h-6 ${templateType === 'obra' ? 'text-[#967764]' : 'text-[#FF0054]'}`} />
             </p>
           </motion.div>
 
@@ -226,10 +236,10 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
       <div className="w-full max-w-[1200px] mx-auto relative z-20 mt-24" style={{ paddingLeft: '160px', paddingRight: '80px', marginTop: '96px' }}>
         <div className="border-t border-white/10 pt-20 relative" style={{ paddingTop: '80px' }}>
           
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF0054]/10 rounded-full blur-[100px] pointer-events-none"></div>
+          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[100px] pointer-events-none ${templateType === 'obra' ? 'bg-[#967764]/10' : 'bg-[#FF0054]/10'}`}></div>
 
           <div className="text-center mb-16 relative z-10" style={{ marginBottom: '64px', textAlign: 'center' }}>
-            <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4" style={{ marginBottom: '16px' }}>Experimente na <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-pink-500">Prática</span></h3>
+            <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4" style={{ marginBottom: '16px' }}>Experimente na <span className={`text-transparent bg-clip-text bg-gradient-to-r ${templateType === 'obra' ? 'from-[#967764] to-[#E7DFDB]' : 'from-[#FF0054] to-pink-500'}`}>Prática</span></h3>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto" style={{ margin: '0 auto', maxWidth: '672px' }}>
               Interaja com a ferramenta abaixo. Simule um agendamento com dados fictícios e sinta a experiência de conversão instantânea.
             </p>
