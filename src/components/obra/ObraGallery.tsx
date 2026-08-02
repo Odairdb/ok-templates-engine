@@ -5,26 +5,26 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const nicheImages = {
   default: [
-    "https://images.unsplash.com/photo-1531834685032-c3cb3ce674d2?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1429497419816-9ca5cb245749?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
   ],
   arquitetura: [
     "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600210491369-e756d1864197?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop"
   ],
   construtora: [
     "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1531834685032-c3cb3ce674d2?q=80&w=800&auto=format&fit=crop"
+    "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop"
   ],
   engenharia: [
-    "https://images.unsplash.com/photo-1531834685032-c3cb3ce674d2?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1429497419816-9ca5cb245749?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?q=80&w=800&auto=format&fit=crop"
   ]
