@@ -48,14 +48,24 @@ export default function Home() {
           </div>
 
           {/* OBRA Section */}
-          <div className="flex flex-col items-center opacity-40 cursor-not-allowed w-full">
+          <div className="flex flex-col items-center w-full">
             {/* Title Box */}
-            <div className="w-full bg-black/20 border border-white/5 rounded-xl py-6 px-4 shadow-xl flex flex-col items-center relative overflow-hidden" style={{ marginBottom: '40px' }}>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-500 mb-2 tracking-tight">Template OBRA</h2>
-              <p className="text-gray-500 text-base md:text-lg m-0" style={{ marginBottom: '16px' }}>Engenharia, Construção e Arquitetura</p>
-              <span className="bg-white/5 text-gray-400 font-black rounded-full uppercase tracking-widest block" style={{ padding: '8px 24px', fontSize: '12px' }}>
-                Em Breve
-              </span>
+            <div className="w-full bg-[#E7DFDB]/10 border border-[#967764]/30 rounded-xl py-6 px-4 shadow-xl flex flex-col items-center" style={{ marginBottom: '40px' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#E7DFDB] mb-2 tracking-tight">Template OBRA</h2>
+              <p className="text-[#967764] text-base md:text-lg m-0">Engenharia, Construção e Arquitetura</p>
+            </div>
+            
+            {/* Horizontal Buttons */}
+            <div className="flex justify-center w-full flex-wrap" style={{ gap: '12px' }}>
+              <Link href="/obra?nicho=engenharia" className="bg-[#967764] hover:bg-[#7a5f4f] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Engenharia
+              </Link>
+              <Link href="/obra?nicho=construtora" className="bg-[#967764] hover:bg-[#7a5f4f] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Construtora
+              </Link>
+              <Link href="/obra?nicho=arquitetura" className="bg-[#967764] hover:bg-[#7a5f4f] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Arquitetura
+              </Link>
             </div>
           </div>
 

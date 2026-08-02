@@ -2,16 +2,26 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Users, TrendingUp, Sparkles, CalendarClock } from 'lucide-react';
+import { Calendar, Users, TrendingUp, Sparkles, CalendarClock, MessageSquare, Target, Zap } from 'lucide-react';
 import BookingWidgetDemo from './BookingWidgetDemo';
+import SmartLeadWidgetDemo from './SmartLeadWidgetDemo';
 
 export default function PlinShowcase({ niche, templateType }: { niche: string, templateType: string }) {
   const getBusinessName = () => {
-    switch(niche) {
-      case 'barbearia': return 'Sua Barbearia';
-      case 'salao': return 'Seu Salão';
-      case 'manicure': return 'Seu Espaço';
-      default: return 'Seu Negócio';
+    if (templateType === 'obra') {
+      switch(niche) {
+        case 'arquitetura': return 'Seu Escritório';
+        case 'construtora': return 'Sua Construtora';
+        case 'engenharia': return 'Sua Engenharia';
+        default: return 'Sua Empresa';
+      }
+    } else {
+      switch(niche) {
+        case 'barbearia': return 'Sua Barbearia';
+        case 'salao': return 'Seu Salão';
+        case 'manicure': return 'Seu Espaço';
+        default: return 'Seu Negócio';
+      }
     }
   };
 
@@ -39,8 +49,17 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
           >
             <h2 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-tight text-white">
               {businessName} já tem <br/>
-              agendamento <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-[#ff7eb3]">online?</span>
+              {templateType === 'obra' ? (
+                <>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-[#ff7eb3]">orçamentos</span> <br/>
+                  online?
+                </>
+              ) : (
+                <>
+                  agendamento <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-[#ff7eb3]">online?</span>
+                </>
+              )}
             </h2>
           </motion.div>
 
@@ -53,7 +72,9 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             className="flex flex-col pt-2 lg:pt-4"
           >
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
-              O <strong>Sistema PLIN</strong> escuta, entende e transforma o caos do WhatsApp em agendamentos claros — para que nenhum cliente se perca na conversa.
+              {templateType === 'obra' 
+                ? "O Sistema PLIN capta, qualifica e organiza as solicitações de orçamento automaticamente — para que nenhum lead se perca no caos do WhatsApp."
+                : "O Sistema PLIN escuta, entende e transforma o caos do WhatsApp em agendamentos claros — para que nenhum cliente se perca na conversa."}
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center bg-[#FF0054] hover:bg-[#D00045] text-white rounded-full font-black text-sm uppercase tracking-[0.15em] transition-transform hover:scale-105 shadow-[0_0_30px_rgba(255,0,84,0.6)] px-10 py-5">
@@ -144,29 +165,59 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
       <div className="w-full max-w-[1200px] mx-auto relative z-20 -mt-20 md:-mt-10" style={{ paddingLeft: '160px', paddingRight: '80px' }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-white/10 pt-12">
           
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex flex-col">
-            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
-              <Calendar className="w-5 h-5 text-gray-300" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Agendamento Inteligente</h3>
-            <p className="text-sm text-gray-400 leading-relaxed">Sua agenda funcionando 24h por dia, recebendo marcações automaticamente sem você mover um dedo.</p>
-          </motion.div>
+          {templateType === 'obra' ? (
+            <>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                  <Target className="w-5 h-5 text-gray-300" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Captação 24h</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Não perca mais nenhuma oportunidade. O sistema recebe pedidos de orçamento a qualquer hora do dia ou da noite.</p>
+              </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
-            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
-              <Users className="w-5 h-5 text-gray-300" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Ação, não apenas anotação</h3>
-            <p className="text-sm text-gray-400 leading-relaxed">Histórico de clientes, preferências e taxas de retorno. Saiba exatamente quem senta na sua cadeira.</p>
-          </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                  <MessageSquare className="w-5 h-5 text-gray-300" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Caixa Única (CRM)</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Todos os contatos centralizados. Gerencie status, adicione notas e acompanhe toda a negociação em um só lugar.</p>
+              </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
-            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
-              <TrendingUp className="w-5 h-5 text-gray-300" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Integração Financeira</h3>
-            <p className="text-sm text-gray-400 leading-relaxed">Fluxo de caixa automático. O sistema calcula seu lucro e comissões de forma transparente e em tempo real.</p>
-          </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                  <Zap className="w-5 h-5 text-gray-300" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Fechamento Mais Rápido</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Respostas ágeis geram mais vendas. Elimine processos manuais e converta leads qualificados com facilidade.</p>
+              </motion.div>
+            </>
+          ) : (
+            <>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                  <Calendar className="w-5 h-5 text-gray-300" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Agendamento Inteligente</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Sua agenda funcionando 24h por dia, recebendo marcações automaticamente sem você mover um dedo.</p>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                  <Users className="w-5 h-5 text-gray-300" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Ação, não apenas anotação</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Histórico de clientes, preferências e taxas de retorno. Saiba exatamente quem senta na sua cadeira.</p>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                  <TrendingUp className="w-5 h-5 text-gray-300" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Integração Financeira</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Fluxo de caixa automático. O sistema calcula seu lucro e comissões de forma transparente e em tempo real.</p>
+              </motion.div>
+            </>
+          )}
 
         </div>
       </div>
@@ -191,10 +242,16 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <BookingWidgetDemo 
-                title={businessName}
-                services={demoServices} 
-              />
+              {templateType === 'obra' ? (
+                <SmartLeadWidgetDemo 
+                  businessName={businessName}
+                />
+              ) : (
+                <BookingWidgetDemo 
+                  title={businessName}
+                  services={demoServices} 
+                />
+              )}
             </motion.div>
           </div>
 
