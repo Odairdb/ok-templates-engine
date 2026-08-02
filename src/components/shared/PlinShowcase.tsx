@@ -179,7 +179,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
 
           <div className="text-center mb-16 relative z-10" style={{ marginBottom: '64px', textAlign: 'center' }}>
             <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4" style={{ marginBottom: '16px' }}>Experimente na <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF0054] to-pink-500">Prática</span></h3>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto" style={{ margin: '0 auto', maxWidth: '672px' }}>
               Interaja com a ferramenta abaixo. Simule um agendamento com dados fictícios e sinta a experiência de conversão instantânea.
             </p>
           </div>
