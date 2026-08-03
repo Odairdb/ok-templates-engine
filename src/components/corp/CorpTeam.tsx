@@ -8,16 +8,19 @@ const nicheTeam = {
     { name: "Roberto Silva", role: "Sócio Diretor", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop", desc: "Com mais de 20 anos de experiência em gestão estratégica, lidera as grandes operações com rigor e precisão financeira." },
     { name: "Ana Beatriz", role: "Head de Consultoria", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop", desc: "Especialista em unir inovação aos resultados práticos, criando soluções empresariais premiadas." },
     { name: "Carlos Mendes", role: "Gerente de Controladoria", img: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=600&auto=format&fit=crop", desc: "O homem dos números. Assegura que cronogramas e orçamentos corporativos sejam respeitados." },
+    { name: "Mariana Luz", role: "Diretora de Operações", img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop", desc: "Garante a fluidez de todos os processos internos, otimizando a entrega para o cliente final." },
   ],
   advogados: [
     { name: "Ana Beatriz", role: "Sócia Fundadora", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop", desc: "Visionária e estrategista, Ana conduz as negociações mais complexas do escritório." },
     { name: "Roberto Silva", role: "Diretor Jurídico", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop", desc: "Especialista em direito societário, garantindo segurança e blindagem patrimonial." },
     { name: "Carlos Mendes", role: "Head Trabalhista", img: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=600&auto=format&fit=crop", desc: "Focado na prevenção de passivos trabalhistas com alta taxa de êxito." },
+    { name: "Mariana Luz", role: "Especialista Tributária", img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop", desc: "Atua em grandes teses tributárias, recuperando milhões em créditos para nossos clientes." },
   ],
   contadores: [
     { name: "Carlos Mendes", role: "Sócio e Contador Chefe", img: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=600&auto=format&fit=crop", desc: "Lidera as auditorias com foco absoluto em compliance e redução tributária." },
     { name: "Roberto Silva", role: "Consultor Tributário", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop", desc: "Mestre em planejamento e elisão fiscal, trazendo economia real aos clientes." },
     { name: "Ana Beatriz", role: "Head de BPO", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop", desc: "Responsável pela terceirização financeira de alto nível para grandes contas." },
+    { name: "Mariana Luz", role: "Auditora Sênior", img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop", desc: "Garante o rigor técnico nos balanços e a completa conformidade contábil das operações." },
   ]
 };
 

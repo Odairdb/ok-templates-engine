@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -10,23 +10,23 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
   const getBusinessName = () => {
     if (templateType === 'obra') {
       switch(niche) {
-        case 'arquitetura': return 'Seu Escritório';
+        case 'arquitetura': return 'Seu EscritÃ³rio';
         case 'construtora': return 'Sua Construtora';
         case 'engenharia': return 'Sua Engenharia';
         default: return 'Sua Empresa';
       }
     } else if (templateType === 'corp') {
       switch(niche) {
-        case 'advogados': return 'Seu Escritório';
+        case 'advogados': return 'Seu EscritÃ³rio';
         case 'contadores': return 'Sua Contabilidade';
         default: return 'Sua Empresa';
       }
     } else {
       switch(niche) {
         case 'barbearia': return 'Sua Barbearia';
-        case 'salao': return 'Seu Salão';
-        case 'manicure': return 'Seu Espaço';
-        default: return 'Seu Negócio';
+        case 'salao': return 'Seu SalÃ£o';
+        case 'manicure': return 'Seu EspaÃ§o';
+        default: return 'Seu NegÃ³cio';
       }
     }
   };
@@ -34,7 +34,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
   const businessName = getBusinessName();
 
   const demoServices = [
-    { id: "1", name: "Corte Degradê + Barba", duration: 45, price: 65.00 },
+    { id: "1", name: "Corte DegradÃª + Barba", duration: 45, price: 65.00 },
     { id: "2", name: "Sobrancelha na Navalha", duration: 15, price: 15.00 },
     { id: "3", name: "Limpeza de Pele Express", duration: 30, price: 50.00 }
   ];
@@ -54,15 +54,15 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
             className="flex flex-col"
           >
             <h2 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-tight text-white">
-              {businessName} já tem <br/>
+              {businessName} jÃ¡ tem <br/>
               {templateType === 'obra' ? (
                 <>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#967764] to-[#E7DFDB]">orçamentos</span> <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#967764] to-[#E7DFDB]">orÃ§amentos</span> <br/>
                   online?
                 </>
               ) : templateType === 'corp' ? (
                 <>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8D99AE] to-[#FFFFFF]">avaliações</span> <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8D99AE] to-[#FFFFFF]">avaliaÃ§Ãµes</span> <br/>
                   online?
                 </>
               ) : (
@@ -84,8 +84,8 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
           >
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
               {(templateType === 'obra' || templateType === 'corp') 
-                ? "O Sistema PLIN capta, qualifica e organiza as solicitações de orçamento automaticamente — para que nenhum lead se perca no caos do WhatsApp."
-                : "O Sistema PLIN escuta, entende e transforma o caos do WhatsApp em agendamentos claros — para que nenhum cliente se perca na conversa."}
+                ? "O Sistema PLIN capta, qualifica e organiza as solicitaÃ§Ãµes de orÃ§amento automaticamente â€” para que nenhum lead se perca no caos do WhatsApp."
+                : "O Sistema PLIN escuta, entende e transforma o caos do WhatsApp em agendamentos claros â€” para que nenhum cliente se perca na conversa."}
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className={`inline-flex items-center justify-center text-white rounded-full font-black text-sm uppercase tracking-[0.15em] transition-transform hover:scale-105 px-10 py-5 ${templateType === 'obra' ? 'bg-[#967764] hover:bg-[#7a5f4f] shadow-[0_0_30px_rgba(150,119,100,0.6)]' : templateType === 'corp' ? 'bg-[#8D99AE] hover:bg-[#6C7A92] shadow-[0_0_30px_rgba(141,153,174,0.6)]' : 'bg-[#FF0054] hover:bg-[#D00045] shadow-[0_0_30px_rgba(255,0,84,0.6)]'}`}>
@@ -198,24 +198,24 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
                   <Target className="w-5 h-5 text-gray-300" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Captação 24h</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">Não perca mais nenhuma oportunidade. O sistema recebe pedidos de orçamento a qualquer hora do dia ou da noite.</p>
+                <h3 className="text-xl font-bold text-white mb-2">CaptaÃ§Ã£o 24h</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">NÃ£o perca mais nenhuma oportunidade. O sistema recebe pedidos de orÃ§amento a qualquer hora do dia ou da noite.</p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
                   <MessageSquare className="w-5 h-5 text-gray-300" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Caixa Única (CRM)</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">Todos os contatos centralizados. Gerencie status, adicione notas e acompanhe toda a negociação em um só lugar.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Caixa Ãšnica (CRM)</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Todos os contatos centralizados. Gerencie status, adicione notas e acompanhe toda a negociaÃ§Ã£o em um sÃ³ lugar.</p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
                   <Zap className="w-5 h-5 text-gray-300" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Fechamento Mais Rápido</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">Respostas ágeis geram mais vendas. Elimine processos manuais e converta leads qualificados com facilidade.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Fechamento Mais RÃ¡pido</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Respostas Ã¡geis geram mais vendas. Elimine processos manuais e converta leads qualificados com facilidade.</p>
               </motion.div>
             </>
           ) : (
@@ -225,23 +225,23 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
                   <Calendar className="w-5 h-5 text-gray-300" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Agendamento Inteligente</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">Sua agenda funcionando 24h por dia, recebendo marcações automaticamente sem você mover um dedo.</p>
+                <p className="text-sm text-gray-400 leading-relaxed">Sua agenda funcionando 24h por dia, recebendo marcaÃ§Ãµes automaticamente sem vocÃª mover um dedo.</p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
                   <Users className="w-5 h-5 text-gray-300" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Ação, não apenas anotação</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">Histórico de clientes, preferências e taxas de retorno. Saiba exatamente quem senta na sua cadeira.</p>
+                <h3 className="text-xl font-bold text-white mb-2">AÃ§Ã£o, nÃ£o apenas anotaÃ§Ã£o</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">HistÃ³rico de clientes, preferÃªncias e taxas de retorno. Saiba exatamente quem senta na sua cadeira.</p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col lg:border-l lg:border-white/10 lg:pl-10">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
                   <TrendingUp className="w-5 h-5 text-gray-300" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Integração Financeira</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">Fluxo de caixa automático. O sistema calcula seu lucro e comissões de forma transparente e em tempo real.</p>
+                <h3 className="text-xl font-bold text-white mb-2">IntegraÃ§Ã£o Financeira</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Fluxo de caixa automÃ¡tico. O sistema calcula seu lucro e comissÃµes de forma transparente e em tempo real.</p>
               </motion.div>
             </>
           )}
@@ -249,16 +249,16 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
         </div>
       </div>
 
-      {/* DEGUSTAÇÃO PREMIUM: EXPERIMENTE NA PRÁTICA */}
+      {/* DEGUSTAÃ‡ÃƒO PREMIUM: EXPERIMENTE NA PRÃTICA */}
       <div className="w-full max-w-[1200px] mx-auto relative z-20 mt-24" style={{ paddingLeft: '160px', paddingRight: '80px', marginTop: '96px' }}>
         <div className="border-t border-white/10 pt-20 relative" style={{ paddingTop: '80px' }}>
           
           <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[100px] pointer-events-none ${templateType === 'obra' ? 'bg-[#967764]/10' : templateType === 'corp' ? 'bg-[#8D99AE]/10' : 'bg-[#FF0054]/10'}`}></div>
 
           <div className="text-center mb-16 relative z-10" style={{ marginBottom: '64px', textAlign: 'center' }}>
-            <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4" style={{ marginBottom: '16px' }}>Experimente na <span className={`text-transparent bg-clip-text bg-gradient-to-r ${templateType === 'obra' ? 'from-[#967764] to-[#E7DFDB]' : templateType === 'corp' ? 'from-[#8D99AE] to-[#FFFFFF]' : 'from-[#FF0054] to-pink-500'}`}>Prática</span></h3>
+            <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4" style={{ marginBottom: '16px' }}>Experimente na <span className={`text-transparent bg-clip-text bg-gradient-to-r ${templateType === 'obra' ? 'from-[#967764] to-[#E7DFDB]' : templateType === 'corp' ? 'from-[#8D99AE] to-[#FFFFFF]' : 'from-[#FF0054] to-pink-500'}`}>PrÃ¡tica</span></h3>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto" style={{ margin: '0 auto', maxWidth: '672px' }}>
-              Interaja com a ferramenta abaixo. Simule um agendamento com dados fictícios e sinta a experiência de conversão instantânea.
+              Interaja com a ferramenta abaixo. Simule um agendamento com dados fictÃ­cios e sinta a experiÃªncia de conversÃ£o instantÃ¢nea.
             </p>
           </div>
 
@@ -270,9 +270,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
               transition={{ duration: 0.5 }}
             >
               {(templateType === 'obra' || templateType === 'corp') ? (
-                <SmartLeadWidgetDemo 
-                  businessName={businessName}
-                />
+                <SmartLeadWidgetDemo businessName={businessName} templateType={templateType} />
               ) : (
                 <BookingWidgetDemo 
                   title={businessName}
@@ -288,4 +286,5 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
     </section>
   );
 }
+
 

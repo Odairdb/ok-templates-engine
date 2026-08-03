@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { MessageSquare, Send, CheckCircle2, AlertCircle } from "lucide-react";
 
-export default function SmartLeadWidgetDemo({ businessName = "Construtora Exemplo" }: { businessName?: string }) {
+export default function SmartLeadWidgetDemo({ businessName = "Construtora Exemplo", templateType = "obra" }: { businessName?: string, templateType?: string }) {
     const [isOpen, setIsOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -28,7 +28,7 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
         return (
             <div 
                 style={{ 
-                    background: 'linear-gradient(to bottom right, #041E30, #3B4146)', 
+                    background: templateType === 'corp' ? 'linear-gradient(to bottom right, #0B132B, #1C2541)' : 'linear-gradient(to bottom right, #041E30, #3B4146)', 
                     borderRadius: '16px', 
                     padding: '24px', 
                     color: '#E7DFDB', 
@@ -40,11 +40,11 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
                     flexDirection: 'column', 
                     justifyContent: 'center', 
                     alignItems: 'center', 
-                    border: '1px solid rgba(231,223,219,0.1)', 
+                    border: '1px solid rgba(255,255,255,0.1)', 
                     fontFamily: 'sans-serif' 
                 }}
             >
-                <div style={{ position: 'absolute', top: 0, right: 0, width: '256px', height: '256px', backgroundColor: 'rgba(150,119,100,0.15)', borderRadius: '50%', filter: 'blur(80px)', marginRight: '-40px', marginTop: '-40px' }}></div>
+                <div style={{ position: 'absolute', top: 0, right: 0, width: '256px', height: '256px', backgroundColor: templateType === 'corp' ? 'rgba(141,153,174,0.15)' : 'rgba(150,119,100,0.15)', borderRadius: '50%', filter: 'blur(80px)', marginRight: '-40px', marginTop: '-40px' }}></div>
                 <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', width: '100%', maxWidth: '384px' }}>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '12px', color: '#E7DFDB' }}>Precisa de um orçamento?</h3>
                     <p style={{ color: 'rgba(231,223,219,0.6)', fontSize: '1rem', marginBottom: '32px', lineHeight: 1.6 }}>
@@ -54,12 +54,12 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
                         onClick={() => setIsOpen(true)}
                         style={{ 
                             width: '100%', 
-                            backgroundColor: '#967764', 
+                            backgroundColor: templateType === 'corp' ? '#8D99AE' : '#967764', 
                             color: '#fff', 
                             fontWeight: 'bold', 
                             padding: '16px', 
                             borderRadius: '12px', 
-                            boxShadow: '0 0 20px rgba(150,119,100,0.3)', 
+                            boxShadow: templateType === 'corp' ? '0 0 20px rgba(141,153,174,0.3)' : '0 0 20px rgba(150,119,100,0.3)', 
                             border: 'none', 
                             cursor: 'pointer', 
                             display: 'flex', 
@@ -69,13 +69,13 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
                             transition: 'all 0.2s ease'
                         }}
                         onMouseOver={(e) => {
-                            e.currentTarget.style.backgroundColor = '#7a5f4f';
-                            e.currentTarget.style.boxShadow = '0 0 30px rgba(150,119,100,0.5)';
+                            e.currentTarget.style.backgroundColor = templateType === 'corp' ? '#6C7A92' : '#7a5f4f';
+                            e.currentTarget.style.boxShadow = templateType === 'corp' ? '0 0 30px rgba(141,153,174,0.5)' : '0 0 30px rgba(150,119,100,0.5)';
                             e.currentTarget.style.transform = 'translateY(-2px)';
                         }}
                         onMouseOut={(e) => {
-                            e.currentTarget.style.backgroundColor = '#967764';
-                            e.currentTarget.style.boxShadow = '0 0 20px rgba(150,119,100,0.3)';
+                            e.currentTarget.style.backgroundColor = templateType === 'corp' ? '#8D99AE' : '#967764';
+                            e.currentTarget.style.boxShadow = templateType === 'corp' ? '0 0 20px rgba(141,153,174,0.3)' : '0 0 20px rgba(150,119,100,0.3)';
                             e.currentTarget.style.transform = 'translateY(0)';
                         }}
                     >
@@ -176,7 +176,7 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
                         <button 
                             type="submit" 
                             disabled={loading}
-                            style={{ flex: 2, height: '48px', backgroundColor: '#967764', color: '#fff', borderRadius: '12px', fontWeight: 'bold', border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: loading ? 'not-allowed' : 'pointer', opacity: loading ? 0.7 : 1 }}
+                            style={{ flex: 2, height: '48px', backgroundColor: templateType === 'corp' ? '#8D99AE' : '#967764', color: '#fff', borderRadius: '12px', fontWeight: 'bold', border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: loading ? 'not-allowed' : 'pointer', opacity: loading ? 0.7 : 1 }}
                         >
                             {loading ? 'Enviando...' : (
                                 <>

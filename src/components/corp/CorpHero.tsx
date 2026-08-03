@@ -10,7 +10,7 @@ export default function CorpHero({ initialNiche }: { initialNiche: string }) {
         return {
           title: "DEFESA &\nPATRIMÔNIO",
           subtitle: "/ Segurança jurídica de alto nível /",
-          bgImage: "url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')"
+          bgImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000&auto=format&fit=crop')"
         };
       case 'contadores':
         return {
