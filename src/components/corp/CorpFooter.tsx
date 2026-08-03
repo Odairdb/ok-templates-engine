@@ -69,7 +69,7 @@ export default function CorpFooter({ niche }: { niche: string }) {
 
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '40px', display: 'flex', flexDirection: 'column', md: { flexDirection: 'row', justifyContent: 'space-between' }, gap: '24px', alignItems: 'center' }}>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.875rem', margin: 0, textAlign: 'center' }}>
-            &copy; 2026 {getLogoText()}. Todos os direitos reservados. CREA: 123456-7
+            &copy; 2026 {getLogoText()}. Todos os direitos reservados. OAB: 12345-67
           </p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem' }}>Desenvolvido por</span>

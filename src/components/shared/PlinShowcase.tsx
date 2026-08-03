@@ -84,8 +84,8 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
           >
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
               {(templateType === 'obra' || templateType === 'corp') 
-                ? "O Sistema PLIN capta, qualifica e organiza as solicitações de orçamento automaticamente � para que nenhum lead se perca no caos do WhatsApp."
-                : "O Sistema PLIN escuta, entende e transforma o caos do WhatsApp em agendamentos claros � para que nenhum cliente se perca na conversa."}
+                ? "O Sistema PLIN capta, qualifica e organiza as solicitações de orçamento automaticamente — para que nenhum lead se perca no caos do WhatsApp."
+                : "O Sistema PLIN escuta, entende e transforma o caos do WhatsApp em agendamentos claros — para que nenhum cliente se perca na conversa."}
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className={`inline-flex items-center justify-center text-white rounded-full font-black text-sm uppercase tracking-[0.15em] transition-transform hover:scale-105 px-10 py-5 ${templateType === 'obra' ? 'bg-[#967764] hover:bg-[#7a5f4f] shadow-[0_0_30px_rgba(150,119,100,0.6)]' : templateType === 'corp' ? 'bg-[#8D99AE] hover:bg-[#6C7A92] shadow-[0_0_30px_rgba(141,153,174,0.6)]' : 'bg-[#FF0054] hover:bg-[#D00045] shadow-[0_0_30px_rgba(255,0,84,0.6)]'}`}>
@@ -206,7 +206,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
                   <MessageSquare className="w-5 h-5 text-gray-300" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Caixa �anica (CRM)</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Caixa Única (CRM)</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">Todos os contatos centralizados. Gerencie status, adicione notas e acompanhe toda a negociação em um só lugar.</p>
               </motion.div>
 
@@ -249,7 +249,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
         </div>
       </div>
 
-      {/* DEGUSTA�!ÒO PREMIUM: EXPERIMENTE NA PRÁTICA */}
+      {/* DEGUSTAÇÃO PREMIUM: EXPERIMENTE NA PRÁTICA */}
       <div className="w-full max-w-[1200px] mx-auto relative z-20 mt-24" style={{ paddingLeft: '160px', paddingRight: '80px', marginTop: '96px' }}>
         <div className="border-t border-white/10 pt-20 relative" style={{ paddingTop: '80px' }}>
           
