@@ -67,7 +67,7 @@ export default function ObraFooter({ niche }: { niche: string }) {
 
         </div>
 
-        <div style={{ borderTop: '1px solid rgba(231,223,219,0.1)', paddingTop: '40px', display: 'flex', flexDirection: 'column', md: { flexDirection: 'row', justifyContent: 'space-between' }, gap: '24px', alignItems: 'center' }}>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/10 pt-10">
           <p style={{ color: 'rgba(231,223,219,0.5)', fontSize: '0.875rem', margin: 0, textAlign: 'center' }}>
             &copy; 2026 {getLogoText()}. Todos os direitos reservados. CREA: 123456-7
           </p>
