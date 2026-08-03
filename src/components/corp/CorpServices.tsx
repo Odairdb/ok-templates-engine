@@ -5,32 +5,25 @@ import { motion } from 'framer-motion';
 
 const nicheServices = {
   default: [
-    { title: "Direito Societário", tag: "Cálculo", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
-    { title: "Laudos Técnicos", tag: "Perícia", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
-    { title: "Execução de Corp", tag: "Gestão", img: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop" },
-    { title: "Reformas", tag: "Revitalização", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" },
-    { title: "Instalações", tag: "Infraestrutura", img: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop" },
+    { title: "Direito Societário", tag: "Assessoria", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
+    { title: "Auditoria Contábil", tag: "Conformidade", img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop" },
+    { title: "Governança", tag: "Gestão", img: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" },
+    { title: "Planejamento Estratégico", tag: "Resultados", img: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" },
+    { title: "Consultoria Tributária", tag: "Compliance", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" },
   ],
-  arquitetura: [
-    { title: "Projeto Arquitetônico", tag: "Concepção", img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" },
-    { title: "Design de Interiores", tag: "Ergonomia", img: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop" },
-    { title: "Maquetes 3D", tag: "Visualização", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" },
-    { title: "Paisagismo", tag: "Natureza", img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop" },
-    { title: "Acompanhamento", tag: "Fidelidade", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
+  advogados: [
+    { title: "Direito Societário", tag: "Empresarial", img: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" },
+    { title: "Contencioso Cível", tag: "Litígio", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" },
+    { title: "Direito Tributário", tag: "Defesa", img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop" },
+    { title: "Trabalhista", tag: "Prevenção", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop" },
+    { title: "Contratos", tag: "Segurança", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
   ],
-  construtora: [
-    { title: "Construção do Zero", tag: "Fundação", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
-    { title: "Empreendimentos", tag: "Incorporação", img: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop" },
-    { title: "Gerenciamento", tag: "Gestão", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
-    { title: "Reformas Corporativas", tag: "Empresas", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" },
-    { title: "Infraestrutura", tag: "Urbanismo", img: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop" },
-  ],
-  engenharia: [
-    { title: "Direito Societário", tag: "Cálculo", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
-    { title: "Laudos Técnicos", tag: "Perícia", img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
-    { title: "Execução de Corp", tag: "Gestão", img: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop" },
-    { title: "Reforço Estrutural", tag: "Segurança", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" },
-    { title: "Instalações", tag: "Infraestrutura", img: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop" },
+  contadores: [
+    { title: "Auditoria Financeira", tag: "Análise", img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop" },
+    { title: "Gestão Tributária", tag: "Compliance", img: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" },
+    { title: "BPO Financeiro", tag: "Terceirização", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" },
+    { title: "Consultoria Contábil", tag: "Estratégia", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" },
+    { title: "Folha de Pagamento", tag: "DP", img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop" },
   ]
 };
 
@@ -45,7 +38,7 @@ export default function CorpServices({ niche }: { niche: string }) {
           <div style={{ maxWidth: '800px' }}>
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontFamily: 'Times New Roman, serif', color: '#FFFFFF', marginBottom: '32px', fontWeight: 400 }}>Áreas de Atuação</h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.125rem', lineHeight: 1.6, padding: '0 16px' }}>
-              Técnica, estética e precisão. Dominamos cada etapa do processo construtivo para garantir que sua visão se torne realidade com a máxima excelência.
+              Experiência, estratégia e solidez. Dominamos as complexidades do seu negócio para garantir que seu patrimônio esteja sempre protegido.
             </p>
           </div>
         </div>

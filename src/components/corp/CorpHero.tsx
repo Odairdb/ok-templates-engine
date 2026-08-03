@@ -6,29 +6,29 @@ import { motion } from 'framer-motion';
 export default function CorpHero({ initialNiche }: { initialNiche: string }) {
   const getHeroContent = () => {
     switch (initialNiche) {
-      case 'arquitetura':
+      case 'advogados':
         return {
-          title: "THE PERFECT\nHOME®",
-          subtitle: "/ We craft custom homes /",
-          bgImage: "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop')"
+          title: "DEFESA &\nPATRIMÔNIO",
+          subtitle: "/ Segurança jurídica de alto nível /",
+          bgImage: "url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')"
         };
-      case 'construtora':
+      case 'contadores':
         return {
-          title: "SOLID\nFOUNDATIONS®",
-          subtitle: "/ Construindo o seu futuro /",
-          bgImage: "url('https://images.unsplash.com/photo-1541888081622-c2e472061099?q=80&w=2070&auto=format&fit=crop')"
+          title: "ESTRATÉGIA\nCONTÁBIL",
+          subtitle: "/ Conformidade e crescimento /",
+          bgImage: "url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2000&auto=format&fit=crop')"
         };
-      case 'engenharia':
+      case 'administradores':
         return {
-          title: "ENGINEERING\nEXCELLENCE®",
-          subtitle: "/ Precisão em cada detalhe /",
-          bgImage: "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1931&auto=format&fit=crop')"
+          title: "VISÃO DE\nNEGÓCIOS",
+          subtitle: "/ Gestão de alta performance /",
+          bgImage: "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop')"
         };
       default:
         return {
-          title: "THE PERFECT\nPROJECT®",
-          subtitle: "/ Especialistas em Corps de alto padrão /",
-          bgImage: "url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop')"
+          title: "THE PERFECT\nBUSINESS",
+          subtitle: "/ Especialistas em soluções corporativas /",
+          bgImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop')"
         };
     }
   };
@@ -134,10 +134,10 @@ export default function CorpHero({ initialNiche }: { initialNiche: string }) {
           </div>
           
           <h3 style={{ color: '#0B132B', fontSize: '2rem', fontWeight: 400, lineHeight: 1.2, marginBottom: '16px', fontFamily: 'Times New Roman, serif' }}>
-            Design Único &<br />Ergonomia
+            Estratégia &<br />Resultados
           </h3>
           <p style={{ color: '#8D99AE', fontSize: '1rem' }}>
-            Da planta baixa aos renders hiper-realistas.
+            Do planejamento à execução.
           </p>
 
           <div style={{ marginTop: '40px', position: 'relative' }}>
@@ -151,8 +151,8 @@ export default function CorpHero({ initialNiche }: { initialNiche: string }) {
               </div>
             </div>
             <div style={{ position: 'absolute', top: '-16px', right: '-16px', backgroundColor: '#FFFFFF', padding: '16px', borderRadius: '16px', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
-              <span style={{ fontSize: '0.65rem', fontWeight: 800, letterSpacing: '1px', color: '#1C2541', display: 'block', marginBottom: '8px' }}>ROOMTOUR</span>
-              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000&auto=format&fit=crop" alt="Room" style={{ width: '80px', height: '50px', objectFit: 'cover', borderRadius: '4px' }} />
+              <span style={{ fontSize: '0.65rem', fontWeight: 800, letterSpacing: '1px', color: '#1C2541', display: 'block', marginBottom: '8px' }}>DASHBOARD</span>
+              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" alt="Dashboard" style={{ width: '80px', height: '50px', objectFit: 'cover', borderRadius: '4px' }} />
             </div>
           </div>
         </motion.div>

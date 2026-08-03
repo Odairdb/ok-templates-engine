@@ -5,28 +5,19 @@ import { motion } from 'framer-motion';
 
 const nicheTeam = {
   default: [
-    { name: "Roberto Silva", role: "Engenheiro Chefe", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop", desc: "Com mais de 20 anos de experiência em grandes estruturas, lidera a execução técnica com rigor e precisão." },
-    { name: "Ana Beatriz", role: "Arquiteta Sênior", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop", desc: "Especialista em unir estética contemporânea e sustentabilidade, criando espaços premiados internacionalmente." },
-    { name: "Carlos Mendes", role: "Gestor de Corps", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop", desc: "O homem de campo. Assegura que cronogramas e custos sejam respeitados rigorosamente em todas as fases da construção." },
-    { name: "Mariana Luz", role: "Engenheira de Instalações", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop", desc: "Mestre no design inteligente de sistemas elétricos e hidráulicos, garantindo a invisibilidade e eficiência da infraestrutura." },
+    { name: "Roberto Silva", role: "Sócio Diretor", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop", desc: "Com mais de 20 anos de experiência em gestão estratégica, lidera as grandes operações com rigor e precisão financeira." },
+    { name: "Ana Beatriz", role: "Head de Consultoria", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop", desc: "Especialista em unir inovação aos resultados práticos, criando soluções empresariais premiadas." },
+    { name: "Carlos Mendes", role: "Gerente de Controladoria", img: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=600&auto=format&fit=crop", desc: "O homem dos números. Assegura que cronogramas e orçamentos corporativos sejam respeitados." },
   ],
-  arquitetura: [
-    { name: "Ana Beatriz", role: "Sócia Fundadora", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop", desc: "Visionária e criativa, Ana traduz os sonhos dos clientes em projetos icônicos." },
-    { name: "Roberto Silva", role: "Diretor de Projetos", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop", desc: "Responsável pela viabilidade técnica e integração estrutural da arquitetura." },
-    { name: "Mariana Luz", role: "Design de Interiores", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop", desc: "O toque final de sofisticação, escolha de materiais e mobiliário assinado." },
-    { name: "Carlos Mendes", role: "Acompanhamento", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop", desc: "Garante a fidelidade da execução em relação ao projeto original." },
+  advogados: [
+    { name: "Ana Beatriz", role: "Sócia Fundadora", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop", desc: "Visionária e estrategista, Ana conduz as negociações mais complexas do escritório." },
+    { name: "Roberto Silva", role: "Diretor Jurídico", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop", desc: "Especialista em direito societário, garantindo segurança e blindagem patrimonial." },
+    { name: "Carlos Mendes", role: "Head Trabalhista", img: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=600&auto=format&fit=crop", desc: "Focado na prevenção de passivos trabalhistas com alta taxa de êxito." },
   ],
-  construtora: [
-    { name: "Carlos Mendes", role: "CEO", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop", desc: "Lidera a construtora com foco absoluto em qualidade de entrega e inovação construtiva." },
-    { name: "Roberto Silva", role: "Diretor Técnico", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop", desc: "Supervisiona as grandes empreitadas garantindo segurança e conformidade técnica." },
-    { name: "Ana Beatriz", role: "Planejamento", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop", desc: "Orçamentista e analista de viabilidade, garantindo que a Corp se pague." },
-    { name: "Mariana Luz", role: "Engenheira de Segurança", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop", desc: "Segurança do trabalho em primeiro lugar. Acidente zero é nossa meta." },
-  ],
-  engenharia: [
-    { name: "Roberto Silva", role: "Engenheiro Calculista", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop", desc: "O cérebro por trás das estruturas. Mais de 500 edifícios calculados sem nenhuma patologia." },
-    { name: "Carlos Mendes", role: "Engenheiro Residente", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop", desc: "Liderança de canteiro, focado na produtividade das equipes e logística." },
-    { name: "Mariana Luz", role: "Engenheira Elétrica", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop", desc: "Projetos de alta e baixa tensão voltados para a máxima eficiência energética." },
-    { name: "Ana Beatriz", role: "Perita Técnica", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop", desc: "Especialista em diagnósticos prediais e elaboração de laudos periciais." },
+  contadores: [
+    { name: "Carlos Mendes", role: "Sócio e Contador Chefe", img: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=600&auto=format&fit=crop", desc: "Lidera as auditorias com foco absoluto em compliance e redução tributária." },
+    { name: "Roberto Silva", role: "Consultor Tributário", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop", desc: "Mestre em planejamento e elisão fiscal, trazendo economia real aos clientes." },
+    { name: "Ana Beatriz", role: "Head de BPO", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop", desc: "Responsável pela terceirização financeira de alto nível para grandes contas." },
   ]
 };
 
@@ -39,8 +30,8 @@ export default function CorpTeam({ niche }: { niche: string }) {
         
         <div className="flex flex-col items-center text-center mb-20">
           <div className="max-w-3xl">
-            <span className="text-[#8D99AE] font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Nossa Equipe</span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#0B132B] mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>Líderes de Execução</h2>
+            <span className="text-[#8D99AE] font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Nossa Liderança</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#0B132B] mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>Especialistas Estratégicos</h2>
           </div>
         </div>
 

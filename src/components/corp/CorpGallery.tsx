@@ -5,27 +5,21 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const nicheImages = {
   default: [
-    "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
+    "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
   ],
-  arquitetura: [
-    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop"
+  advogados: [
+    "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1505664177941-eb10b958fb44?q=80&w=800&auto=format&fit=crop"
   ],
-  construtora: [
-    "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop"
-  ],
-  engenharia: [
-    "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+  contadores: [
+    "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
   ]
 };
@@ -53,9 +47,9 @@ export default function CorpGallery({ niche }: { niche: string }) {
         <div className="flex flex-col items-center text-center" style={{ marginBottom: '120px', paddingTop: '40px' }}>
           <div className="max-w-3xl">
             <span className="text-[#8D99AE] font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Nosso Legado</span>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl text-[#0B132B] mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>Corps de Arte Reais</h2>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl text-[#0B132B] mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>Excelência Comprovada</h2>
             <p className="text-[#1C2541] text-lg md:text-xl max-w-2xl mx-auto">
-              Nossa assinatura está impressa na qualidade dos acabamentos e na solidez de cada fundação. Conheça nossos trabalhos recentes.
+              Nossa assinatura está impressa na qualidade das nossas entregas e na solidez das nossas parcerias estratégicas.
             </p>
           </div>
         </div>
