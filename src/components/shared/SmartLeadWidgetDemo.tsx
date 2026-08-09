@@ -3,25 +3,35 @@
 import { useState } from "react";
 import { MessageSquare, Send, CheckCircle2, AlertCircle } from "lucide-react";
 
+import { submitLeadAction } from "@/actions/submitLead";
+
 export default function SmartLeadWidgetDemo({ businessName = "Construtora Exemplo", templateType = "obra" }: { businessName?: string, templateType?: string }) {
     const [isOpen, setIsOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState("");
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
         setError("");
 
-        setTimeout(() => {
-            setLoading(false);
+        const formData = new FormData(e.currentTarget);
+        formData.append("template_type", templateType);
+
+        const result = await submitLeadAction(formData);
+
+        setLoading(false);
+
+        if (result.error) {
+            setError(result.error);
+        } else if (result.success) {
             setSuccess(true);
             setTimeout(() => {
                 setIsOpen(false);
                 setSuccess(false);
-            }, 3000);
-        }, 1200);
+            }, 4000);
+        }
     };
 
     if (!isOpen) {
