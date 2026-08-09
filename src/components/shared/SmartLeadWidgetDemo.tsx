@@ -5,7 +5,7 @@ import { MessageSquare, Send, CheckCircle2, AlertCircle } from "lucide-react";
 
 import { submitLeadAction } from "@/actions/submitLead";
 
-export default function SmartLeadWidgetDemo({ businessName = "Construtora Exemplo", templateType = "obra" }: { businessName?: string, templateType?: string }) {
+export default function SmartLeadWidgetDemo({ businessName = "Construtora Exemplo", templateType = "obra", niche = "" }: { businessName?: string, templateType?: string, niche?: string }) {
     const [isOpen, setIsOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -17,7 +17,8 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
         setError("");
 
         const formData = new FormData(e.currentTarget);
-        formData.append("template_type", templateType);
+        const fullSource = niche ? `${templateType} (${niche})` : templateType;
+        formData.append("template_type", fullSource);
 
         const result = await submitLeadAction(formData);
 

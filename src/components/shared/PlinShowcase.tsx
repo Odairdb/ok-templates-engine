@@ -269,14 +269,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              {(templateType === 'obra' || templateType === 'corp') ? (
-                <SmartLeadWidgetDemo businessName={businessName} templateType={templateType} />
-              ) : (
-                <BookingWidgetDemo 
-                  title={businessName}
-                  services={demoServices} 
-                />
-              )}
+                <SmartLeadWidgetDemo businessName={businessName} templateType={templateType} niche={niche} />
             </motion.div>
           </div>
 
