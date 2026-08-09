@@ -57,7 +57,7 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
             >
                 <div style={{ position: 'absolute', top: 0, right: 0, width: '256px', height: '256px', backgroundColor: templateType === 'corp' ? 'rgba(141,153,174,0.15)' : 'rgba(150,119,100,0.15)', borderRadius: '50%', filter: 'blur(80px)', marginRight: '-40px', marginTop: '-40px' }}></div>
                 <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', width: '100%', maxWidth: '384px' }}>
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '12px', color: '#E7DFDB' }}>Precisa de um orçamento?</h3>
+                    <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '12px', color: '#E7DFDB' }}>{templateType === 'aura' ? 'Agendar Serviço?' : 'Precisa de um orçamento?'}</h3>
                     <p style={{ color: 'rgba(231,223,219,0.6)', fontSize: '1rem', marginBottom: '32px', lineHeight: 1.6 }}>
                         Envie os detalhes do que você precisa e a equipe da <strong style={{ color: '#fff' }}>{businessName}</strong> entrará em contato rapidamente.
                     </p>
@@ -91,7 +91,7 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
                         }}
                     >
                         <MessageSquare size={20} />
-                        Solicitar Orçamento Expresso
+                        {templateType === 'aura' ? 'Solicitar Agendamento' : 'Solicitar Orçamento Expresso'}
                     </button>
                 </div>
             </div>
@@ -113,7 +113,7 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
                 boxSizing: 'border-box'
             }}
         >
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#111827', marginBottom: '4px' }}>Solicitar Orçamento</h3>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#111827', marginBottom: '4px' }}>{templateType === 'aura' ? 'Agendamento Online' : 'Solicitar Orçamento'}</h3>
             <p style={{ color: '#6b7280', fontSize: '0.875rem', marginBottom: '24px' }}>Preencha os dados abaixo para a empresa entrar em contato.</p>
 
             {success ? (
@@ -166,7 +166,7 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
                     </div>
 
                     <div>
-                        <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#374151', marginBottom: '4px' }}>O que você precisa? *</label>
+                        <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#374151', marginBottom: '4px' }}>{templateType === 'aura' ? 'Qual serviço deseja agendar? *' : 'O que você precisa? *'}</label>
                         <textarea 
                             name="message" 
                             required 
@@ -192,7 +192,7 @@ export default function SmartLeadWidgetDemo({ businessName = "Construtora Exempl
                             {loading ? 'Enviando...' : (
                                 <>
                                     <Send size={16} />
-                                    Enviar Solicitação
+                                    {templateType === 'aura' ? 'Confirmar Agendamento' : 'Enviar Solicitação'}
                                 </>
                             )}
                         </button>
