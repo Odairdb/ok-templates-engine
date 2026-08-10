@@ -12,7 +12,7 @@ export async function submitLeadAction(formData: FormData) {
         name,
         email: email || "sem-email@cliente.com",
         phone,
-        service: customService || `Template: ${templateType.toUpperCase()}`,
+        service: customService ? `${templateType.toUpperCase()} - ${customService}` : `Template: ${templateType.toUpperCase()}`,
         message
     };
 
