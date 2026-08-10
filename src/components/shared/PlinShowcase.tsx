@@ -269,7 +269,22 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
+              {templateType === 'aura' ? (
+                <BookingWidgetDemo 
+                    services={[
+                        { id: "1", name: "Corte", price: "A partir de R$ 50", duration: 45 },
+                        { id: "2", name: "Barba", price: "R$ 40", duration: 30 },
+                        { id: "3", name: "Pé e Mão", price: "R$ 60", duration: 60 },
+                        { id: "4", name: "Escova", price: "A partir de R$ 80", duration: 40 }
+                    ]}
+                    isClaimed={true}
+                    title={businessName}
+                    templateType="aura"
+                    niche={niche}
+                />
+              ) : (
                 <SmartLeadWidgetDemo businessName={businessName} templateType={templateType} niche={niche} />
+              )}
             </motion.div>
           </div>
 
