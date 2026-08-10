@@ -6,12 +6,13 @@ export async function submitLeadAction(formData: FormData) {
     const phone = formData.get("customer_phone") as string;
     const message = formData.get("message") as string;
     const templateType = formData.get("template_type") as string;
+    const customService = formData.get("service") as string;
 
     const data = {
         name,
-        email: email || "",
+        email: email || "sem-email@cliente.com",
         phone,
-        service: `Template: ${templateType.toUpperCase()}`,
+        service: customService || `Template: ${templateType.toUpperCase()}`,
         message
     };
 
