@@ -93,6 +93,28 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          
+          {/* SERV Section */}
+          <div className="flex flex-col items-center w-full">
+            {/* Title Box */}
+            <div className="w-full bg-[#001B48]/20 border border-[#00b4d8]/30 rounded-xl py-6 px-4 shadow-xl flex flex-col items-center" style={{ marginBottom: '40px' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">Template SERV</h2>
+              <p className="text-[#00b4d8] text-base md:text-lg m-0">Assistência Técnica e Serviços</p>
+            </div>
+            
+            {/* Horizontal Buttons */}
+            <div className="flex justify-center w-full flex-wrap" style={{ gap: '12px' }}>
+              <Link href="/serv?nicho=ar_condicionado" className="bg-[#0077b6] hover:bg-[#00b4d8] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Ar Condicionado
+              </Link>
+              <Link href="/serv?nicho=assistencia" className="bg-[#0077b6] hover:bg-[#00b4d8] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Assistência Téc.
+              </Link>
+              <Link href="/serv?nicho=limpeza" className="bg-[#0077b6] hover:bg-[#00b4d8] text-white font-black rounded-full uppercase tracking-widest transition-colors shadow-lg text-center whitespace-nowrap block" style={{ padding: '12px 20px', fontSize: '12px' }}>
+                Limpeza/Diarista
+              </Link>
+            </div>
+          </div>
 
         </div>
       </div>

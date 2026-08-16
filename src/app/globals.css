@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@source "../components";
+@source "../app";
 
 @theme {
   --color-primary: var(--primary);
@@ -6,6 +8,10 @@
   --color-accent: var(--accent);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* SERV Theme Colors */
+  --color-fundo-primario: #001B48;
+  --color-amarela: #00A8E8;
 }
 
 @layer base {
