@@ -8,6 +8,10 @@ import AuraFooter from '@/components/aura/AuraFooter';
 import PlinShowcase from '@/components/shared/PlinShowcase';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
 
+export const metadata = {
+  title: "Template AURA | Beleza & Estética",
+};
+
 interface PageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }

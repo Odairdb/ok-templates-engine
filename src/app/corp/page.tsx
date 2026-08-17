@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import CorpHero from '@/components/corp/CorpHero';
 import CorpHeader from '@/components/corp/CorpHeader';
 import CorpServices from '@/components/corp/CorpServices';
@@ -8,6 +8,10 @@ import CorpProcess from '@/components/corp/CorpProcess';
 import CorpFooter from '@/components/corp/CorpFooter';
 import PlinShowcase from '@/components/shared/PlinShowcase';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+
+export const metadata = {
+  title: "Template CORP | Advocacia & Contabilidade",
+};
 
 interface PageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;

@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: "Aura | Beleza & Estética",
-  description: "Template Premium para o mercado da beleza",
+  title: "Seu Próximo Site",
+  description: "Templates Premium para o seu negócio",
 };
 
 export default function RootLayout({

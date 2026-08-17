@@ -16,7 +16,7 @@ export default function ObraHero({ initialNiche }: { initialNiche: string }) {
         return {
           title: "SOLID\nFOUNDATIONS®",
           subtitle: "/ Construindo o seu futuro /",
-          bgImage: "url('https://images.unsplash.com/photo-1541888081622-c2e472061099?q=80&w=2070&auto=format&fit=crop')"
+          bgImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop')"
         };
       case 'engenharia':
         return {

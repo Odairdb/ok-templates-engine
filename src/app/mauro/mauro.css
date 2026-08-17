@@ -1,0 +1,25 @@
+/* Minimalist dark custom scrollbar for Mauro Benedetti page */
+
+.mauro-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .mauro-scrollbar::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  
+  .mauro-scrollbar::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+  }
+  
+  .mauro-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Hides scrollbar in Firefox but keeps it scrollable */
+  .mauro-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #333 #050505;
+  }

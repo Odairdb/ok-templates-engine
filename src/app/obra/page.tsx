@@ -9,6 +9,10 @@ import ObraFooter from '@/components/obra/ObraFooter';
 import PlinShowcase from '@/components/shared/PlinShowcase';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
 
+export const metadata = {
+  title: "Template OBRA | Construção Civil & Engenharia",
+};
+
 interface PageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }

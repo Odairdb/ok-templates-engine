@@ -88,7 +88,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
                 : "O Sistema PLIN escuta, entende e transforma o caos do WhatsApp em agendamentos claros — para que nenhum cliente se perca na conversa."}
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <a href="https://wa.me/5531973516770" target="_blank" rel="noreferrer" className={`inline-flex items-center justify-center text-white rounded-full font-black text-sm uppercase tracking-[0.15em] transition-transform hover:scale-105 px-10 py-5 ${templateType === 'obra' ? 'bg-[#967764] hover:bg-[#7a5f4f] shadow-[0_0_30px_rgba(150,119,100,0.6)]' : templateType === 'corp' ? 'bg-[#8D99AE] hover:bg-[#6C7A92] shadow-[0_0_30px_rgba(141,153,174,0.6)]' : 'bg-[#FF0054] hover:bg-[#D00045] shadow-[0_0_30px_rgba(255,0,84,0.6)]'}`}>
+              <a href="https://wa.me/5531998243056" target="_blank" rel="noreferrer" className={`inline-flex items-center justify-center text-white rounded-full font-black text-sm uppercase tracking-[0.15em] transition-transform hover:scale-105 px-10 py-5 ${templateType === 'obra' ? 'bg-[#967764] hover:bg-[#7a5f4f] shadow-[0_0_30px_rgba(150,119,100,0.6)]' : templateType === 'corp' ? 'bg-[#8D99AE] hover:bg-[#6C7A92] shadow-[0_0_30px_rgba(141,153,174,0.6)]' : 'bg-[#FF0054] hover:bg-[#D00045] shadow-[0_0_30px_rgba(255,0,84,0.6)]'}`}>
                 CHAMA NO WHATSAPP
               </a>
             </div>
