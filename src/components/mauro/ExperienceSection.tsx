@@ -98,10 +98,8 @@ export default function ExperienceSection() {
               style={{ 
                 opacity: useTransform(scrollYProgress, [0.1, 0.3], [0, 1]),
                 y: useTransform(scrollYProgress, [0.1, 0.3], [50, 0]),
-                scale: useTransform(scrollYProgress, [0.1, 0.3], [0.95, 1])
-              }}
+                scale: useTransform(scrollYProgress, [0.1, 0.3], [0.95, 1]), maxWidth: '900px' }}
               className="flex flex-col items-center"
-              style={{ maxWidth: '900px' }}
             >
               <h4 className="text-mauro-gold text-sm md:text-base tracking-[0.3em] uppercase font-sans mb-6">
                 Selo de Garantia
@@ -172,4 +170,5 @@ export default function ExperienceSection() {
     </section>
   );
 }
+
 
