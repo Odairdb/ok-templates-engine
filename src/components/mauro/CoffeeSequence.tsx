@@ -66,14 +66,14 @@ export default function CoffeeSequence() {
             {/* Beat B */}
             <motion.div 
               style={{ opacity: beatBOpacity, y: beatBY }}
-              className="absolute w-full flex flex-col items-center md:items-start justify-center"
+              className="absolute w-full flex flex-col items-center md:items-start justify-center px-6 md:px-12"
             >
               <div className="max-w-xl border-l border-mauro-gold pl-8 md:pl-12">
                 <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif text-mauro-light drop-shadow-lg leading-tight">
                   Presentes Corporativos <br/> <span className="italic text-mauro-gold">Inesquecíveis</span>
                 </h2>
                 <p className="mt-6 text-base md:text-lg text-mauro-light/80 leading-relaxed font-sans font-light">
-                  Mais do que caféé, entregamos prestígio. Lotes exclusivos desenhados para Diretores e CEOs surpreenderem os parceiros mais vitais de seus negócios.
+                  Mais do que café, entregamos prestígio. Lotes exclusivos desenhados para Diretores e CEOs surpreenderem os parceiros mais vitais de seus negócios.
                 </p>
               </div>
             </motion.div>
@@ -112,4 +112,5 @@ export default function CoffeeSequence() {
     </div>
   );
 }
+
 

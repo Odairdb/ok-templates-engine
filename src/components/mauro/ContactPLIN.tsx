@@ -76,10 +76,10 @@ export default function ContactPLIN() {
 
     return (
         <section 
-            className="bg-mauro-dark flex justify-center items-center border-t border-mauro-gold/10 relative"
+            className="bg-mauro-dark flex justify-center items-center border-t border-mauro-gold/10 relative px-4 md:px-6"
             style={{ paddingTop: '150px', paddingBottom: '150px' }}
         >
-            <div className="w-full max-w-xl bg-mauro-dark rounded-sm p-8 md:p-12 border border-mauro-gold/30 relative text-mauro-light font-sans shadow-2xl">
+            <div className="w-full max-w-xl bg-mauro-dark rounded-sm p-6 sm:p-8 md:p-12 border border-mauro-gold/30 relative text-mauro-light font-sans shadow-2xl">
                 
                 <h3 className="text-3xl font-serif text-mauro-light mb-10">Como podemos ajudá-lo(a)</h3>
 
@@ -170,4 +170,5 @@ export default function ContactPLIN() {
         </section>
     );
 }
+
 
