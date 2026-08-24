@@ -36,7 +36,7 @@ export default function Footer() {
                             />
                         </a>
                         <p className="text-sm font-light leading-relaxed">
-                            Do genoma Ã  xÃ­cara, aqui seu cafÃ© tem mais valor.
+                            Do genoma à xícara, aqui seu café tem mais valor.
                         </p>
                           <div className="flex gap-4 mt-2">
                               <a href="https://www.instagram.com/benedettimauro/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-mauro-gold text-mauro-dark flex items-center justify-center hover:bg-white transition-colors shrink-0">
@@ -58,11 +58,11 @@ export default function Footer() {
                             <li><a href="/mauro/instituto" className="hover:text-mauro-gold transition-colors">Instituto BSC</a></li>
                         </ul>
 
-                        <h4 className="text-mauro-gold text-xs tracking-[0.2em] font-bold uppercase mb-4">Jornada do CafÃ©</h4>
+                        <h4 className="text-mauro-gold text-xs tracking-[0.2em] font-bold uppercase mb-4">Jornada do Café</h4>
                         <ul className="flex flex-col gap-2 text-sm font-light">
-                            <li><a href="/mauro/jornada-do-cafe" className="hover:text-mauro-gold transition-colors">A Jornada do CafÃ©</a></li>
+                            <li><a href="/mauro/jornada-do-cafe" className="hover:text-mauro-gold transition-colors">A Jornada do Café</a></li>
                             <li><a href="/mauro/cafeicultor" className="hover:text-mauro-gold transition-colors">O Cafeicultor</a></li>
-                            <li><a href="/mauro/marca-propria" className="hover:text-mauro-gold transition-colors">Marca PrÃ³pria</a></li>
+                            <li><a href="/mauro/marca-propria" className="hover:text-mauro-gold transition-colors">Marca Própria</a></li>
                         </ul>
                     </div>
 
@@ -70,7 +70,7 @@ export default function Footer() {
                     <div>
                         <h4 className="text-mauro-gold text-xs tracking-[0.2em] font-bold uppercase mb-4">Comercial</h4>
                         <ul className="flex flex-col gap-2 text-sm font-light mb-10">
-                            <li><a href="/mauro/parcerias" className="hover:text-mauro-gold transition-colors">Parcerias e ConexÃµes</a></li>
+                            <li><a href="/mauro/parcerias" className="hover:text-mauro-gold transition-colors">Parcerias e Conexões</a></li>
                             <li><a href="/mauro/mentorias" className="hover:text-mauro-gold transition-colors">Mentorias</a></li>
                         </ul>
 
@@ -94,13 +94,13 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-3">
                                 <MapPin size={16} className="text-mauro-gold shrink-0" />
-                                <span>PoÃ§os de Caldas - MG</span>
+                                <span>Poços de Caldas - MG</span>
                             </li>
                         </ul>
 
                         <h4 className="text-mauro-gold text-xs tracking-[0.2em] font-bold uppercase mb-4">Institucional</h4>
                         <ul className="flex flex-col gap-2 text-sm font-light">
-                            <li><a href="/mauro/privacidade" className="hover:text-mauro-gold transition-colors">PolÃ­tica de Privacidade</a></li>
+                            <li><a href="/mauro/privacidade" className="hover:text-mauro-gold transition-colors">Política de Privacidade</a></li>
                             <li><a href="/mauro/termos" className="hover:text-mauro-gold transition-colors">Termos de Uso</a></li>
                         </ul>
                     </div>
