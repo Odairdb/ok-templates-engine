@@ -13,12 +13,11 @@
   --color-fundo-primario: #001B48;
   --color-amarela: #00A8E8;
 
-  /* MAURO BENEDETTI Theme Colors */
-  --color-mauro-cream: #FFF6E5;
-  --color-mauro-amber: #E49638;
-  --color-mauro-brown: #8C5A3D;
-  --color-mauro-darkbrown: #3B2B1E;
-  --color-mauro-black: #050505;
+  /* MAURO BENEDETTI Theme Colors (UI UX Pro Max - Ouro) */
+  --color-mauro-dark: #0A0807;
+  --color-mauro-light: #F2EBE3;
+  --color-mauro-gold: #C89B62;
+  --color-mauro-gold-dark: #A67D4B;
 
   /* Font Families */
   --font-sans: var(--font-inter), sans-serif;
@@ -42,4 +41,29 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+@layer components {
+  .liquid-glass-strong {
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(50px);
+    border: none !important;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .liquid-glass-strong::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.4px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 20%, transparent 40%, transparent 60%, rgba(255,255,255,0.2) 80%, rgba(255,255,255,0.5) 100%);
+    border-radius: inherit;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
 }

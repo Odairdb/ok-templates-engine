@@ -11,7 +11,7 @@
 .menu-link {
   position: relative;
   display: inline-block;
-  padding-bottom: 4px; /* espaÃ§o pra linha */
+  padding-bottom: 4px; /* espaço pra linha */
   color: #ffffff; /* gray-800 */
   text-decoration: none;
   transition: color 0.3s ease;
@@ -79,7 +79,7 @@
   animation: move3 35s ease-in-out infinite alternate;
 }
 
-/* AnimaÃ§Ã£o fadeUp opcional */
+/* Animação fadeUp opcional */
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -132,7 +132,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: var(--xp-yellow); /* Cor da parte que se move */
   border-radius: 10px; /* Bordas arredondadas */
-  border: 2px solid #1a1a1a; /* EspaÃ§o ao redor */
+  border: 2px solid #1a1a1a; /* Espaço ao redor */
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -228,7 +228,7 @@
   z-index: 10;
 }
 
-/* AnimaÃ§Ã£o da textura */
+/* Animação da textura */
 @keyframes textura {
   0% {
     background-position: 0 0;
@@ -238,7 +238,7 @@
   }
 }
 
-/* Efeito Ã­cone lateral */
+/* Efeito ícone lateral */
 .bt .elementor-button-icon {
   position: absolute;
   top: 50%;
@@ -313,8 +313,8 @@
   z-index: 1;
   padding: 50px 15px 50px 15px;
   overflow: hidden;   /* evita que o pseudo-elemento vaze para fora do card */
-  border-radius: 7px; /* ou o radius que vocÃª usa nos cards */
-  /* se vocÃª jÃ¡ aplica border-radius diretamente no card, pode remover daqui */
+  border-radius: 7px; /* ou o radius que você usa nos cards */
+  /* se você já aplica border-radius diretamente no card, pode remover daqui */
 }
 
 .selectorr::before {
@@ -339,7 +339,7 @@
     border-radius: 999px;
     position: relative;
     width: 100%;
-    max-width: 400px; /* fica responsivo atÃ© esse tamanho */
+    max-width: 400px; /* fica responsivo até esse tamanho */
     margin: auto;
     --animation-speed: 2s;
   }
@@ -462,7 +462,7 @@
     }
   }
 
-  /* ===== Container do BotÃ£o ===== */
+  /* ===== Container do Botão ===== */
   .btn-cta-box {
     display: flex;
     align-items: center;
@@ -482,7 +482,7 @@
     flex-wrap: nowrap; /* impede quebra, mantendo texto e seta na mesma linha */
   }
 
-  /* ===== BotÃ£o em si (texto) ===== */
+  /* ===== Botão em si (texto) ===== */
   .btn-cta {
     position: relative;
     z-index: 2;
@@ -506,7 +506,7 @@
       -2.08px 4.15px 38.22px 0px #0F0F0F,
       -5.2px -4px 12.3px -10.4px #FFE5BC57 inset;
     overflow: hidden;
-    /* nÃ£o usar width: 100% para nÃ£o empurrar a seta pra baixo */
+    /* não usar width: 100% para não empurrar a seta pra baixo */
   }
 
   /* Pseudo-elemento para o fundo com zoom e opacidade */
@@ -525,15 +525,15 @@
     z-index: -1;
   }
 
-  /* Hover do botÃ£o: volta ao scale(1) e opacity(1) */
+  /* Hover do botão: volta ao scale(1) e opacity(1) */
   .btn-cta:hover::before {
     transform: scale(1);
     opacity: 1;
   }
 
-  /* ===== Ãcone de seta ===== */
+  /* ===== Ícone de seta ===== */
   .arrow-icon {
-    display: inline-block; /* necessÃ¡rio para o transform funcionar */
+    display: inline-block; /* necessário para o transform funcionar */
     width: 18px;
     rotate: -90deg;
     height: auto;
@@ -580,7 +580,7 @@
 
   /* Cores aproximadas para o layout da imagem */
 :root{ --xp-yellow:#00A8E8; }
-/* pequena suavizaÃ§Ã£o no cartÃ£o */
+/* pequena suavização no cartão */
 .card-tilt { transform: rotate(12deg); }
 
 
@@ -614,7 +614,7 @@
 .mindmap-node1::before {
   content: '';
   position: absolute;
-  left: -60px; /* distancia da linha atÃ© o bloco */
+  left: -60px; /* distancia da linha até o bloco */
   top: 50%;
   transform: translateY(-50%);
   width: 60px; /* comprimento da linha */
@@ -637,7 +637,7 @@
 .mindmap-node2::before {
   content: '';
   position: absolute;
-  right: -60px;   /* menor distÃ¢ncia no mobile */
+  right: -60px;   /* menor distância no mobile */
   top: 50%;
   transform: translateY(-50%);
   width: 60px;    /* linha curta no mobile */
@@ -671,7 +671,7 @@
   100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
 }
 
-/* ===== AnimaÃ§Ãµes sÃ³ quando entra na tela ===== */
+/* ===== Animações só quando entra na tela ===== */
 .reveal-up,
 .reveal-left,
 .reveal-image {
@@ -693,7 +693,7 @@
   animation-timing-function: cubic-bezier(.2,.9,.3,1);
 }
 
-/* ===== Elementos contÃ­nuos ===== */
+/* ===== Elementos contínuos ===== */
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -739,18 +739,18 @@
   background: rgba(255,255,255,0.03);
   box-shadow: 0 6px 18px rgba(2,6,23,0.6);
   transition: transform .22s ease;
-  overflow: visible;    /* evita cortar conteÃºdo interno (Ã­cone, sombras) */
+  overflow: visible;    /* evita cortar conteúdo interno (ícone, sombras) */
 }
 
-/* garante que a seÃ§Ã£o nÃ£o esteja escondendo conteÃºdo */
+/* garante que a seção não esteja escondendo conteúdo */
 #international-xp {
   overflow: visible;
 }
 
-/* prevenÃ§Ã£o de sobreposiÃ§Ã£o indesejada */
+/* prevenção de sobreposição indesejada */
 #international-xp .cards { position: relative; z-index: 1; }
 
-/* garante que os nÃ³s possam animar sem cortar e que fiquem legÃ­veis em mobile */
+/* garante que os nós possam animar sem cortar e que fiquem legíveis em mobile */
 #app-unico { overflow: visible; }
 
 .mindmap-node1, .mindmap-node2 {
@@ -766,14 +766,14 @@
   will-change: transform, opacity;
 }
 
-/* micro-optimizaÃ§Ãµes pra animaÃ§Ã£o */
+/* micro-optimizações pra animação */
   .will-change-anim { will-change: transform, opacity; }
   .payment-icons img, .payment-divider { will-change: transform, opacity; transform-origin: center; }
 
-  /* garante que as divs nÃ£o cortem sombra/transform */
+  /* garante que as divs não cortem sombra/transform */
   section { overflow: visible; }
 
-  /* botÃ£o: transiÃ§Ã£o extra para hover + foco */
+  /* botão: transição extra para hover + foco */
   .btn-aprox {
     transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
   }
@@ -804,7 +804,7 @@
     -webkit-user-drag: none;
     transform-origin: center;
     transition: transform 220ms ease, box-shadow 220ms ease, opacity 180ms ease;
-    filter: none !important;        /* garante que nÃ£o haja darken via filtro */
+    filter: none !important;        /* garante que não haja darken via filtro */
     mix-blend-mode: normal !important;
     background: transparent;
     z-index: 1;
@@ -818,7 +818,7 @@
     opacity: 1;
   }
 
-  /* reduzido: sem animaÃ§Ã£o */
+  /* reduzido: sem animação */
   @media (prefers-reduced-motion: reduce) {
     #carrosselImagens img,
     #xp-nomes h1,

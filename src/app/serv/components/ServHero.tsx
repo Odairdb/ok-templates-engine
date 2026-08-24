@@ -21,7 +21,7 @@ export default function ServHero() {
             Climatização de qualidade para você.
           </h3>
           <h1 className="text-[52px] leading-[1.1] lg:text-[68px] lg:leading-[1.05] delay2 text-white font-bold uppercase" style={{ marginBottom: '24px' }}>
-            ESPECIALISTAS <br />EM <span className="text-amarela">INSTALAÇÃO</span> <br />E <span className="text-amarela">MANUTENÇÃO</span>
+            ESPECIALISTAS <br />EM <span className="text-amarela">INSTALAÇíO</span> <br />E <span className="text-amarela">MANUTENÇíO</span>
           </h1>
           <p className="text-white/60 md:max-w-xl delay3 text-[17px] leading-relaxed" style={{ marginBottom: '32px' }}>
             Garantimos o conforto da sua família e da sua empresa com atendimento rápido, 

@@ -1,241 +1,115 @@
-'use client';
+﻿'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
-
-const FRAME_COUNT = 120;
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function CoffeeSequence() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   
-  const [images, setImages] = useState<HTMLImageElement[]>([]);
-  const [loaded, setLoaded] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
 
-  // Criamos um valor puro de movimento para os textos (substituindo o useScroll do Framer)
-  const smoothProgress = useMotionValue(0);
+  // Strict scroll phases - Absolutely NO overlap
+  // Beat A: 0% - 15% (Title)
+  const beatAOpacity = useTransform(scrollYProgress, [0, 0.10, 0.12, 0.15], [1, 1, 0, 0]);
+  const beatAY = useTransform(scrollYProgress, [0, 0.10, 0.12, 0.15], [0, -50, -100, -100]);
 
-  // Preload Images
-  useEffect(() => {
-    let loadedCount = 0;
-    const imgArray: HTMLImageElement[] = [];
+  // Beat B: 25% - 40% (Corporate)
+  const beatBOpacity = useTransform(scrollYProgress, [0.20, 0.25, 0.35, 0.40], [0, 1, 1, 0]);
+  const beatBY = useTransform(scrollYProgress, [0.20, 0.25, 0.35, 0.40], [50, 0, -50, -100]);
 
-    for (let i = 0; i < FRAME_COUNT; i++) {
-      const img = new Image();
-      img.src = `/sequence/frame_${i}.jpg`;
-      img.onload = () => {
-        loadedCount++;
-        setProgress(Math.round((loadedCount / FRAME_COUNT) * 100));
-        if (loadedCount === FRAME_COUNT) {
-          setImages(imgArray);
-          setLoaded(true);
-        }
-      };
-      imgArray.push(img);
-    }
-  }, []);
+  // Beat C: 50% - 65% (40 Years)
+  const beatCOpacity = useTransform(scrollYProgress, [0.45, 0.50, 0.60, 0.65], [0, 1, 1, 0]);
+  const beatCY = useTransform(scrollYProgress, [0.45, 0.50, 0.60, 0.65], [50, 0, -50, -100]);
 
-  // Bulletproof Scroll Tracking
-  useEffect(() => {
-    if (!loaded) return;
-
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-      
-      // Distância que rolamos a partir do topo do documento
-      const scrollTop = window.scrollY;
-      
-      // O tamanho da tela
-      const viewportHeight = window.innerHeight;
-      
-      // A altura total do nosso container (400vh)
-      const containerHeight = containerRef.current.offsetHeight;
-      
-      // O espaço "rolável" dentro do container (altura do container menos a tela)
-      const scrollableDistance = containerHeight - viewportHeight;
-      
-      // Progresso de 0.0 a 1.0 (limitado a 1.0 caso rolemos mais para baixo no site)
-      let p = scrollTop / scrollableDistance;
-      if (p < 0) p = 0;
-      if (p > 1) p = 1;
-
-      smoothProgress.set(p);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    // Chama uma vez para inicializar
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [loaded, smoothProgress]);
-
-  // Draw on Canvas based on Scroll
-  useEffect(() => {
-    if (!loaded || !canvasRef.current || images.length === 0) return;
-
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const render = (progressValue: number) => {
-      // Calculate which frame to show
-      let frameIndex = Math.floor(progressValue * (FRAME_COUNT - 1));
-      if (frameIndex < 0) frameIndex = 0;
-      if (frameIndex >= FRAME_COUNT) frameIndex = FRAME_COUNT - 1;
-
-      const img = images[frameIndex];
-      if (!img) return;
-
-      // Handle responsive scaling (COVER logic - preenche toda a tela)
-      const canvasRatio = canvas.width / canvas.height;
-      const imgRatio = img.width / img.height;
-      let drawWidth, drawHeight, offsetX, offsetY;
-
-      if (canvasRatio > imgRatio) {
-        // Canvas é mais largo que a imagem (corta em cima/embaixo)
-        drawWidth = canvas.width;
-        drawHeight = img.height * (canvas.width / img.width);
-        offsetX = 0;
-        offsetY = (canvas.height - drawHeight) / 2;
-      } else {
-        // Imagem é mais larga que o canvas (corta as laterais)
-        drawHeight = canvas.height;
-        drawWidth = img.width * (canvas.height / img.height);
-        offsetX = (canvas.width - drawWidth) / 2;
-        offsetY = 0;
-      }
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
-    };
-
-    // Initial render
-    render(0);
-
-    // Subscribe to smooth scroll updates
-    const unsubscribe = smoothProgress.on('change', (latest) => {
-      render(latest);
-    });
-
-    return () => unsubscribe();
-  }, [loaded, images, smoothProgress]);
-
-  // Handle Resize
-  useEffect(() => {
-    const handleResize = () => {
-      if (canvasRef.current) {
-        canvasRef.current.width = window.innerWidth;
-        canvasRef.current.height = window.innerHeight;
-        // Trigger a re-render by slightly nudging the spring or just redrawing the current frame
-        // In a real app we'd force a redraw of current frame, but scroll handles it mostly.
-      }
-    };
-    
-    handleResize(); // set initial size
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // SCROLLYTELLING BEATS (Transforms)
-  // Beat A: 0-20%
-  const beatAOpacity = useTransform(smoothProgress, [0, 0.05, 0.15, 0.2], [0, 1, 1, 0]);
-  const beatAY = useTransform(smoothProgress, [0, 0.05, 0.15, 0.2], [20, 0, 0, -20]);
-
-  // Beat B: 25-45%
-  const beatBOpacity = useTransform(smoothProgress, [0.25, 0.3, 0.4, 0.45], [0, 1, 1, 0]);
-  const beatBY = useTransform(smoothProgress, [0.25, 0.3, 0.4, 0.45], [20, 0, 0, -20]);
-
-  // Beat C: 50-70%
-  const beatCOpacity = useTransform(smoothProgress, [0.5, 0.55, 0.65, 0.7], [0, 1, 1, 0]);
-  const beatCY = useTransform(smoothProgress, [0.5, 0.55, 0.65, 0.7], [20, 0, 0, -20]);
-
-  // Beat D: 75-95%
-  const beatDOpacity = useTransform(smoothProgress, [0.75, 0.8, 0.9, 0.95], [0, 1, 1, 0]);
-  const beatDY = useTransform(smoothProgress, [0.75, 0.8, 0.9, 0.95], [20, 0, 0, -20]);
-
+  // Beat D: 75% - 100% (CTA)
+  const beatDOpacity = useTransform(scrollYProgress, [0.70, 0.75, 1, 1], [0, 1, 1, 1]);
+  const beatDY = useTransform(scrollYProgress, [0.70, 0.75, 1, 1], [50, 0, 0, 0]);
 
   return (
-    <div ref={containerRef} className="relative h-[400vh] bg-[#050505]">
+    <div ref={containerRef} className="relative h-[400vh] bg-mauro-dark">
       
-      {!loaded && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#050505] text-white">
-          <div className="w-64 h-1 bg-gray-800 rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-amber-500 transition-all duration-300"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <p className="mt-4 text-sm font-medium tracking-widest uppercase text-white/60">
-            Extraindo a Essência... {progress}%
-          </p>
-        </div>
-      )}
-
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className="sticky top-0 h-screen w-full overflow-hidden bg-mauro-dark">
         
-        <canvas 
-          ref={canvasRef} 
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        />
+        >
+          <source src="/mauro/video-hero-01.mp4" type="video/mp4" />
+        </video>
         
-        {/* Overlays Container */}
-        <div className="absolute inset-0 pointer-events-none z-10">
-          
-          {/* Beat A */}
-          <motion.div 
-            style={{ opacity: beatAOpacity, y: beatAY }}
-            className="absolute inset-0 flex flex-col items-center justify-center text-center"
-          >
-            <h1 className="text-5xl md:text-8xl font-serif text-white/90 drop-shadow-2xl">
-              Do Genoma à Xícara
-            </h1>
-            <p className="mt-4 text-xl text-amber-500 font-medium tracking-wider">
-              A pureza do Master Chef.
-            </p>
-          </motion.div>
+        <div className="absolute inset-0 bg-mauro-dark mix-blend-multiply opacity-50 z-0 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-mauro-dark/80 via-transparent to-mauro-dark z-0 pointer-events-none"></div>
 
-          {/* Beat B */}
-          <motion.div 
-            style={{ opacity: beatBOpacity, y: beatBY }}
-            className="absolute top-1/2 left-[10%] -translate-y-1/2 max-w-lg"
-          >
-            <h2 className="text-4xl md:text-6xl font-serif text-white/90 drop-shadow-lg">
-              Grãos Selecionados
-            </h2>
-            <p className="mt-4 text-lg text-white/60 leading-relaxed">
-              Cultivados nas melhores altitudes, colhidos no momento exato e avaliados para atingir as maiores notas no protocolo SCA.
-            </p>
-          </motion.div>
+        {/* Global Centered Container to PREVENT lateral sticking */}
+        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none px-4">
+          <div className="w-full max-w-5xl relative h-[600px] flex items-center justify-center">
+            
+            {/* Beat A - Title */}
+            <motion.div 
+              style={{ opacity: beatAOpacity, y: beatAY }}
+              className="absolute w-full flex flex-col items-center justify-center text-center"
+            >
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-mauro-light drop-shadow-2xl tracking-tight">
+                Do Genoma à Xícara
+              </h1>
+              <p className="mt-6 text-lg md:text-2xl text-mauro-gold font-serif italic tracking-wider">
+                Por Mauro Benedetti.
+              </p>
+            </motion.div>
 
-          {/* Beat C */}
-          <motion.div 
-            style={{ opacity: beatCOpacity, y: beatCY }}
-            className="absolute top-1/2 right-[10%] -translate-y-1/2 max-w-lg text-right"
-          >
-            <h2 className="text-4xl md:text-6xl font-serif text-white/90 drop-shadow-lg">
-              Torra Perfeita
-            </h2>
-            <p className="mt-4 text-lg text-white/60 leading-relaxed">
-              O controle milimétrico do calor para revelar as notas sensoriais mais complexas de cada grão, sem artifícios.
-            </p>
-          </motion.div>
+            {/* Beat B */}
+            <motion.div 
+              style={{ opacity: beatBOpacity, y: beatBY }}
+              className="absolute w-full flex flex-col items-center md:items-start justify-center"
+            >
+              <div className="max-w-xl border-l border-mauro-gold pl-8 md:pl-12">
+                <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif text-mauro-light drop-shadow-lg leading-tight">
+                  Presentes Corporativos <br/> <span className="italic text-mauro-gold">Inesquecíveis</span>
+                </h2>
+                <p className="mt-6 text-base md:text-lg text-mauro-light/80 leading-relaxed font-sans font-light">
+                  Mais do que caféé, entregamos prestígio. Lotes exclusivos desenhados para Diretores e CEOs surpreenderem os parceiros mais vitais de seus negócios.
+                </p>
+              </div>
+            </motion.div>
 
-          {/* Beat D */}
-          <motion.div 
-            style={{ opacity: beatDOpacity, y: beatDY }}
-            className="absolute inset-0 flex flex-col items-center justify-center text-center"
-          >
-            <h2 className="text-5xl md:text-7xl font-serif text-white/90 drop-shadow-2xl">
-              Pronto para degustar?
-            </h2>
-            <button className="mt-8 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-black font-bold uppercase tracking-widest rounded-full transition-colors pointer-events-auto">
-              Fale com Especialista
-            </button>
-          </motion.div>
+            {/* Beat C */}
+            <motion.div 
+              style={{ opacity: beatCOpacity, y: beatCY }}
+              className="absolute w-full flex flex-col items-center md:items-end justify-center text-left md:text-right"
+            >
+              <div className="max-w-xl border-l md:border-l-0 md:border-r border-mauro-gold pl-8 md:pl-0 md:pr-12">
+                <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif text-mauro-light drop-shadow-lg leading-tight">
+                  40 Anos de <br/> <span className="italic text-mauro-gold">Maestria</span>
+                </h2>
+                <p className="mt-6 text-base md:text-lg text-mauro-light/80 leading-relaxed font-sans font-light">
+                  O controle milimétrico de cada etapa para revelar as notas sensoriais mais complexas. Uma assinatura de qualidade que eleva o valor de cada embalagem.
+                </p>
+              </div>
+            </motion.div>
 
+            {/* Beat D */}
+            <motion.div 
+              style={{ opacity: beatDOpacity, y: beatDY }}
+              className="absolute w-full flex flex-col items-center justify-center text-center"
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif text-mauro-light drop-shadow-2xl">
+                Pronto para degustar o luxo?
+              </h2>
+              <button className="mt-10 px-10 py-5 bg-transparent border border-mauro-gold text-mauro-gold hover:bg-mauro-gold hover:text-mauro-dark font-sans font-medium uppercase tracking-[0.2em] transition-all duration-500 pointer-events-auto cursor-pointer">
+                Fale com Especialista
+              </button>
+            </motion.div>
+
+          </div>
         </div>
       </div>
     </div>
   );
 }
+

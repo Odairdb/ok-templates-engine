@@ -1,74 +1,69 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 export default function InstitutoSection() {
   return (
-    <section className="bg-mauro-black relative overflow-hidden" style={{ padding: '120px 24px' }}>
+    <section 
+      className="bg-mauro-dark relative overflow-hidden border-t border-mauro-gold/10 w-full"
+      style={{ paddingTop: '150px', paddingBottom: '150px' }} // 150px de respiro (sem apertos)
+    >
       
-      {/* Decorative Background Logo/Watermark */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none w-full max-w-4xl">
-        <Image 
-          src="https://maurobenedetti.com.br/wp-content/uploads/2025/12/icone-ok-comunica-marca-dagua-1.png"
-          alt="Watermark"
-          width={800}
-          height={800}
-          className="w-full h-auto"
-        />
-      </div>
+      {/* Container rigorosamente centralizado usando flex para garantir o meio exato da tela */}
+      <div 
+        className="w-full relative z-10 flex justify-center items-center" 
+        style={{ paddingLeft: '8vw', paddingRight: '8vw' }}
+      >
+        <div className="w-full max-w-[800px] text-center flex flex-col items-center justify-center">
+          
+          {/* Título Centralizado */}
+          <motion.h4 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-mauro-gold text-sm md:text-base tracking-[0.4em] uppercase font-sans mb-6"
+          >
+            O Legado
+          </motion.h4>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="text-4xl sm:text-5xl md:text-7xl font-serif text-mauro-light mb-8 leading-tight"
+          >
+            Instituto BSC
+          </motion.h2>
+          
+          {/* Texto Centralizado */}
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="text-lg md:text-2xl text-mauro-light/70 font-sans font-light leading-relaxed max-w-2xl"
+          >
+            Muito além de uma marca, um centro de excelência. Conheça nossa fundação voltada para a educação, pesquisa e preservação do verdadeiro café de origem.
+          </motion.p>
 
-      <div className="text-center relative z-10" style={{ maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
-        
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-12 inline-block"
-        >
-          <Image 
-            src="https://maurobenedetti.com.br/wp-content/uploads/2026/01/MAURO-BENEDETTI-SPECIALTY-COFFEE.png"
-            alt="Instituto BSC"
-            width={300}
-            height={300}
-            className="w-48 md:w-64 h-auto rounded-full mx-auto"
-          />
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="mt-16"
+          >
+            <button className="group relative px-12 py-5 overflow-hidden rounded-full border border-mauro-gold/50 bg-transparent text-mauro-gold font-sans font-medium uppercase tracking-[0.2em] transition-all hover:border-mauro-gold hover:text-mauro-dark">
+              <span className="relative z-10">Descubra o Instituto</span>
+              <div className="absolute inset-0 h-full w-full bg-mauro-gold transform scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"></div>
+            </button>
+          </motion.div>
 
-        <motion.h2 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-6xl font-serif text-mauro-amber mb-8"
-        >
-          O Instituto BSC
-        </motion.h2>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-mauro-cream font-sans max-w-3xl mx-auto leading-relaxed"
-        >
-          Conheça o Instituto Benedetti Specialty Coffee. Sua importância, objetivos e benefícios.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-12"
-        >
-          <button className="px-10 py-5 bg-mauro-amber text-mauro-black font-bold uppercase tracking-widest rounded-full hover:bg-white transition-colors duration-300">
-            Descubra o Instituto
-          </button>
-        </motion.div>
-
+        </div>
       </div>
     </section>
   );
 }
+

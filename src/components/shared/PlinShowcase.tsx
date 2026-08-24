@@ -249,7 +249,7 @@ export default function PlinShowcase({ niche, templateType }: { niche: string, t
         </div>
       </div>
 
-      {/* DEGUSTAÇÃO PREMIUM: EXPERIMENTE NA PRÁTICA */}
+      {/* DEGUSTAÇíO PREMIUM: EXPERIMENTE NA PRÁTICA */}
       <div className="w-full max-w-[1200px] mx-auto relative z-20 mt-24" style={{ paddingLeft: '160px', paddingRight: '80px', marginTop: '96px' }}>
         <div className="border-t border-white/10 pt-20 relative" style={{ paddingTop: '80px' }}>
           

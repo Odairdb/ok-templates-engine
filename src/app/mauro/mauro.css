@@ -1,25 +1,33 @@
-/* Minimalist dark custom scrollbar for Mauro Benedetti page */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500&display=swap');
 
+.font-serif {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+.font-sans {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Minimalist dark custom scrollbar for Mauro Benedetti page */
 .mauro-scrollbar::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-  
-  .mauro-scrollbar::-webkit-scrollbar-track {
-    background: #050505;
-  }
-  
-  .mauro-scrollbar::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 4px;
-  }
-  
-  .mauro-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-  
-  /* Hides scrollbar in Firefox but keeps it scrollable */
-  .mauro-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: #333 #050505;
-  }
+  width: 6px;
+  height: 6px;
+}
+
+.mauro-scrollbar::-webkit-scrollbar-track {
+  background: #0A0807;
+}
+
+.mauro-scrollbar::-webkit-scrollbar-thumb {
+  background: #C89B62;
+  border-radius: 0px;
+}
+
+.mauro-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #A67D4B;
+}
+
+.mauro-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #C89B62 #0A0807;
+}

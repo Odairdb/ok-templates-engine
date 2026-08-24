@@ -20,7 +20,7 @@ export default function CorpHero({ initialNiche }: { initialNiche: string }) {
         };
       case 'administradores':
         return {
-          title: "VISÃO DE\nNEGÓCIOS",
+          title: "VISíO DE\nNEGÓCIOS",
           subtitle: "/ Gestão de alta performance /",
           bgImage: "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop')"
         };
