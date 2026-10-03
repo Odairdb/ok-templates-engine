@@ -17,7 +17,7 @@ export async function submitLeadAction(formData: FormData) {
     };
 
     try {
-        const response = await fetch("https://plin-crm.vercel.app/api/leads/create", {
+        const response = await fetch("https://plin-crm.vercel.app/api/leads/create/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
