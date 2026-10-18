@@ -55,7 +55,15 @@ export default function AuraFooter({ niche }: { niche: string }) {
 
         <div className="border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500" style={{ marginTop: '80px', paddingTop: '40px' }}>
           <p>© {new Date().getFullYear()} AURA. Todos os direitos reservados.</p>
-          <div className="mt-4 md:mt-0 flex items-center gap-2">
+          <div className="mt-4 md:mt-0 flex items-center gap-4">
+            <a 
+              href={niche === 'barbearia' ? 'https://plin-crm.vercel.app/admin/barbearia' : 'https://plin-crm.vercel.app/admin/salao'} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="text-xs text-gray-400 hover:text-[#C5A880] transition-colors flex items-center gap-1.5 border border-white/10 px-3 py-1 rounded-full"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Painel do Dono (PLIN BEL)
+            </a>
             <span>Desenvolvido por</span>
             <a href="https://okcomunica.com.br" target="_blank" rel="noreferrer" className="flex items-center hover:scale-105 transition-transform">
               <img src="/logo.png" alt="OK Comunica" className="h-6 object-contain" />

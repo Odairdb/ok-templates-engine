@@ -46,8 +46,18 @@ export default function AuraHeader({ niche }: { niche: string }) {
           <a href="#equipe" className="text-white/80 hover:text-[#C5A880] text-sm uppercase tracking-[0.2em] font-bold transition-colors">Equipe</a>
         </nav>
 
-        <div className="relative z-10">
-          <a href="#agendar" className="bg-[#C5A880] hover:bg-[#D4B58A] text-[#1A1A1A] font-black px-10 py-3 rounded-full text-sm uppercase tracking-[0.2em] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(197,168,128,0.6)] shadow-[0_0_15px_rgba(197,168,128,0.3)] hidden sm:block">
+        <div className="relative z-10 flex items-center gap-3">
+          <a
+            href={niche === 'barbearia' ? 'https://plin-crm.vercel.app/admin/barbearia' : 'https://plin-crm.vercel.app/admin/salao'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/80 hover:text-white border border-[#C5A880]/40 hover:border-[#C5A880] bg-black/40 backdrop-blur-sm text-xs font-bold px-4 py-2.5 rounded-full uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm hover:scale-105"
+            title="Acessar o Painel de Gestão e Agendamentos PLIN BEL"
+          >
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            PLIN BEL CRM
+          </a>
+          <a href="#agendar" className="bg-[#C5A880] hover:bg-[#D4B58A] text-[#1A1A1A] font-black px-8 py-3 rounded-full text-sm uppercase tracking-[0.2em] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(197,168,128,0.6)] shadow-[0_0_15px_rgba(197,168,128,0.3)] hidden sm:block">
             Agendar
           </a>
         </div>
